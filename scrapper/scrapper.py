@@ -187,7 +187,7 @@ class Scrapper():
 
 
     def scrap_sql(self):
-        driver = crawler.get_driver()
+        driver = crawler.get_chromium_driver()
 
         today = datetime.today().strftime('%Y-%m-%d')
 
