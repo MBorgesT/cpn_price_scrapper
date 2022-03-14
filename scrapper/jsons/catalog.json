@@ -1,0 +1,302 @@
+[
+    {
+        "product_type": "atum_filetes_azeite",
+        "stores": {
+            "pingo_doce": [
+                {
+                    "brand": "minerva",
+                    "link": "https://mercadao.pt/store/pingo-doce/product/atum-filete-em-azeite-minerva-125-g"
+                },
+                {
+                    "brand": "ramirez",
+                    "link": "https://mercadao.pt/store/pingo-doce/product/filete-de-atum-em-azeite-ramirez-120-g"
+                },
+                {
+                    "brand": "pingo_doce",
+                    "link": "https://mercadao.pt/store/pingo-doce/product/atum-filete-em-azeite-pingo-doce-120-g"
+                },
+                {
+                    "brand": "tenorio",
+                    "link": "https://mercadao.pt/store/pingo-doce/product/filete-de-atum-em-azeite-biologico-tenorio-120-g"
+                },
+                {
+                    "brand": "vasco_da_gama",
+                    "link": "https://mercadao.pt/store/pingo-doce/product/filetes-de-atum-em-azeite-vasco-da-gama-120-g"
+                }
+            ],
+            "continente": [
+                {
+                    "brand": "tenorio",
+                    "link": "https://www.continente.pt/produto/atum-filetes-em-azeite-tenorio-2113579.html"
+                },
+                {
+                    "brand": "santa_catarina",
+                    "link": "https://www.continente.pt/produto/atum-filete-em-azeite-santa-catarina-2848212.html"
+                },
+                {
+                    "brand": "continente",
+                    "link": "https://www.continente.pt/produto/filete-atum-em-azeite-continente-7515071.html"
+                },
+                {
+                    "brand": "minerva",
+                    "link": "https://www.continente.pt/produto/filetes-de-atum-em-azeite-minerva-5414020.html"
+                },
+                {
+                    "brand": "bolina",
+                    "link": "https://www.continente.pt/produto/filete-de-atum-em-azeite-bolina-6919317.html"
+                }
+            ],
+            "auchan": [
+                {
+                    "brand": "general",
+                    "link": "https://www.auchan.pt/pt/alimentacao/mercearia/conservas/atum/filete-general-atum-azeite-120g/2675956.html"
+                },
+                {
+                    "brand": "minerva",
+                    "link": "https://www.auchan.pt/pt/alimentacao/mercearia/conservas/atum/filete-minerva-atum-em-azeite-120g/3227860.html"
+                },
+                {
+                    "brand": "ramirez",
+                    "link": "https://www.auchan.pt/pt/alimentacao/mercearia/conservas/atum/filete-ramirez-atum-azeite-120g/2441398.html"
+                },
+                {
+                    "brand": "santa_catarina",
+                    "link": "https://www.auchan.pt/pt/alimentacao/mercearia/conservas/atum/filete-santa-catarina-atum-azeite-120g/3022389.html"
+                },
+                {
+                    "brand": "pescarias_do_algarve",
+                    "link": "https://www.auchan.pt/pt/alimentacao/mercearia/conservas/atum/filetes-pescarias-algarve-atum-azeite-120g/3153144.html"
+                }
+            ]
+        }
+    },
+    {
+        "product_type": "atum_posta_azeite",
+        "stores": {
+            "pingo_doce": [
+                {
+                    "brand": "dorita",
+                    "link": "https://mercadao.pt/store/pingo-doce/product/atum-posta-em-azeite-dorita-110-g"
+                },
+                {
+                    "brand": "minerva",
+                    "link": "https://mercadao.pt/store/pingo-doce/product/atum-posta-em-azeite-minerva-120-g"
+                },
+                {
+                    "brand": "pingo_doce",
+                    "link": "https://mercadao.pt/store/pingo-doce/product/atum-posta-em-azeite-pingo-doce-120-g"
+                },
+                {
+                    "brand": "bom_petisco",
+                    "link": "https://mercadao.pt/store/pingo-doce/product/atum-posta-em-azeite-bom-petisco-120-g"
+                },
+                {
+                    "brand": "vasco_da_gama",
+                    "link": "https://mercadao.pt/store/pingo-doce/product/atum-posta-em-azeite-vasco-da-gama-120-g"
+                }
+            ],
+            "continente": [
+                {
+                    "brand": "continente",
+                    "link": "https://www.continente.pt/produto/atum-posta-em-azeite-continente-7241156.html"
+                },
+                {
+                    "brand": "bom_petisco",
+                    "link": "https://www.continente.pt/produto/atum-posta-em-azeite-bom-petisco-2533075.html"
+                },
+                {
+                    "brand": "alva",
+                    "link": "https://www.continente.pt/produto/atum-posta-em-azeite-alva-7279834.html"
+                },
+                {
+                    "brand": "a_poveira",
+                    "link": "https://www.continente.pt/produto/atum-posta-em-azeite-a-poveira-7157632.html"
+                },
+                {
+                    "brand": "minerva",
+                    "link": "https://www.continente.pt/produto/atum-posta-em-azeite-minerva-7430567.html"
+                },
+                {
+                    "brand": "ribeira",
+                    "link": "https://www.continente.pt/produto/atum-posta-em-azeite-ribeira-6674508.html"
+                },
+                {
+                    "brand": "santa_catarina",
+                    "link": "https://www.continente.pt/produto/atum-posta-em-azeite-santa-catarina-5757911.html"
+                },
+                {
+                    "brand": "bolina",
+                    "link": "https://www.continente.pt/produto/atum-posta-em-azeite-bolina-6818160.html"
+                }
+            ],
+            "auchan": [
+                {
+                    "brand": "auchan",
+                    "link": "https://www.auchan.pt/pt/alimentacao/mercearia/conservas/atum/atum-auchan-em-azeite-posta-120g/1071641.html"
+                },
+                {
+                    "brand": "minerva",
+                    "link": "https://www.auchan.pt/pt/alimentacao/mercearia/conservas/atum/atum-minerva-posta-em-azeite-120g/3284603.html"
+                },
+                {
+                    "brand": "ribeira",
+                    "link": "https://www.auchan.pt/pt/alimentacao/mercearia/conservas/atum/atum-ribeira-posta-em-azeite-120g/3020079.html"
+                },
+                {
+                    "brand": "a_poveira",
+                    "link": "https://www.auchan.pt/pt/alimentacao/mercearia/conservas/atum/atum-poveira-posta-em-azeite-120g/3206688.html"
+                },
+                {
+                    "brand": "sagres",
+                    "link": "https://www.auchan.pt/pt/alimentacao/mercearia/conservas/atum/atum-sagres-posta-em-azeite-120g/3094644.html"
+                }
+            ]
+        }
+    },
+    {
+        "product_type": "sardinha_azeite",
+        "stores": {
+            "pingo_doce": [
+                {
+                    "brand": "dorita",
+                    "link": "up202110548@up.pthttps://mercadao.pt/store/pingo-doce/product/sardinhas-em-azeite-dorita-120-g"
+                },
+                {
+                    "brand": "bom_petisco",
+                    "link": "https://mercadao.pt/store/pingo-doce/product/sardinha-em-azeite-bom-petisco-120-g"
+                },
+                {
+                    "brand": "ramirez",
+                    "link": "https://mercadao.pt/store/pingo-doce/product/sardinha-filete-em-azeite-ramirez-100-g"
+                },
+                {
+                    "brand": "pingo_doce",
+                    "link": "https://mercadao.pt/store/pingo-doce/product/sardinha-em-azeite-pingo-doce-120-g"
+                }
+            ],
+            "continente": [
+                {
+                    "brand": "continente",
+                    "link": "https://www.continente.pt/produto/sardinha-em-azeite-continente-7368483.html"
+                },
+                {
+                    "brand": "bom_petisco",
+                    "link": "https://www.continente.pt/produto/sardinha-em-azeite-bom-petisco-6629409.html"
+                },
+                {
+                    "brand": "lider",
+                    "link": "https://www.continente.pt/produto/sardinha-em-azeite-lider-6605903.html"
+                },
+                {
+                    "brand": "minerva",
+                    "link": "https://www.continente.pt/produto/sardinha-inteira-em-azeite-minerva-4653748.html"
+                }
+            ],
+            "auchan": [
+                {
+                    "brand": "ramirez",
+                    "link": "https://www.auchan.pt/pt/alimentacao/mercearia/conservas/sardinha/filete-ramirez-sardinha-em-azeite-100g/658009.html"
+                },
+                {
+                    "brand": "bom_petisco",
+                    "link": "https://www.auchan.pt/pt/alimentacao/mercearia/conservas/sardinha/sardinha-bom-petisco-inteira-em-azeite-120g/2986261.html"
+                },
+                {
+                    "brand": "salvora",
+                    "link": "https://www.auchan.pt/pt/alimentacao/mercearia/conservas/sardinha/sardinha-salvora-em-azeite-90g/2884567.html"
+                },
+                {
+                    "brand": "campos_santos",
+                    "link": "https://www.auchan.pt/pt/alimentacao/mercearia/conservas/sardinha/sardinhas-campos-santos-em-azeite-120g/1096693.html"
+                },
+                {
+                    "brand": "socilink",
+                    "link": "https://www.auchan.pt/pt/loja-gourmet/mercearia-gourmet/conservas-pates-e-molhos/sardinhas-socilink-sem-pele-e-sem-espinha-em-azeite-125g/1197739.html"
+                },
+                {
+                    "brand": "auchan",
+                    "link": "https://www.auchan.pt/pt/alimentacao/mercearia/conservas/sardinha/sardinhas-auchan-azeite-120g/3360161.html"
+                },
+                {
+                    "brand": "minerva",
+                    "link": "https://www.auchan.pt/pt/alimentacao/mercearia/conservas/sardinha/sardinhas-minerva-em-azeite-120g/1117634.html"
+                }
+            ]
+        }
+    },
+    {
+        "product_type": "sardinha_tomate",
+        "stores": {
+            "pingo_doce": [
+                {
+                    "brand": "dorita",
+                    "link": "https://mercadao.pt/store/pingo-doce/product/sardinhas-em-tomate-dorita-120-g"
+                },
+                {
+                    "brand": "bom_petisco",
+                    "link": "https://mercadao.pt/store/pingo-doce/product/sardinha-em-tomate-bom-petisco-120-g"
+                },
+                {
+                    "brand": "pingo_doce",
+                    "link": "https://mercadao.pt/store/pingo-doce/product/sardinha-em-tomate-pingo-doce-120-g"
+                },
+                {
+                    "brand": "vasco_da_gama",
+                    "link": "https://mercadao.pt/store/pingo-doce/product/sardinha-em-tomate-vasco-da-gama-120-g"
+                }
+            ],
+            "continente": [
+                {
+                    "brand": "alva",
+                    "link": "https://www.continente.pt/produto/sardinha-inteira-em-tomate-alva-7279848.html"
+                },
+                {
+                    "brand": "bom_petisco",
+                    "link": "https://www.continente.pt/produto/sardinha-em-tomate-bom-petisco-6629351.html"
+                },
+                {
+                    "brand": "continente",
+                    "link": "https://www.continente.pt/produto/sardinha-em-tomate-continente-7368471.html"
+                },
+                {
+                    "brand": "lider",
+                    "link": "https://www.continente.pt/produto/sardinha-em-tomate-lider-2003661.html"
+                },
+                {
+                    "brand": "manna",
+                    "link": "https://www.continente.pt/produto/sardinha-em-tomate-manna-3907632.html"
+                },
+                {
+                    "brand": "minerva",
+                    "link": "https://www.continente.pt/produto/sardinha-inteira-em-tomate-minerva-4653740.html"
+                }
+            ],
+            "auchan": [
+                {
+                    "brand": "ribeira",
+                    "link": "https://www.auchan.pt/pt/alimentacao/mercearia/conservas/sardinha/filetes-ribeira-de-sardinhas-tomate-sem-pele-e-espinhas-120g/3035916.html"
+                },
+                {
+                    "brand": "ramirez",
+                    "link": "https://www.auchan.pt/pt/alimentacao/mercearia/conservas/sardinha/sardinhas-ramirez-em-tomate-125g/16960.html"
+                },
+                {
+                    "brand": "pescador",
+                    "link": "https://www.auchan.pt/pt/alimentacao/mercearia/conservas/sardinha/sardinhas-pescador-portuguesas-em-tomate-56g/1006624.html"
+                },
+                {
+                    "brand": "lider",
+                    "link": "https://www.auchan.pt/pt/alimentacao/mercearia/conservas/sardinha/sardinhas-lider-em-tomate-120g/6836.html"
+                },
+                {
+                    "brand": "bom_petisco",
+                    "link": "https://www.auchan.pt/pt/alimentacao/mercearia/conservas/sardinha/sardinha-bom-petisco-inteira-em-tomate-120g/2986287.html"
+                },
+                {
+                    "brand": "minerva",
+                    "link": "https://www.auchan.pt/pt/alimentacao/mercearia/conservas/sardinha/sardinhas-minerva-em-tomate-120g/3227819.html"
+                }
+            ]
+        }
+    }
+]
