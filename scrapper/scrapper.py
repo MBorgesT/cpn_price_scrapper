@@ -198,7 +198,7 @@ class Scrapper():
 
         line_list = []
 
-        print('\n\nScraping:')
+        print(f'\n\nDate: {today}   Scraping:')
         for pt in self.catalog:
             pt_name = self.product_type_dict[pt['product_type']]
 
