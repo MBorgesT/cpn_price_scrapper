@@ -31,7 +31,6 @@ def get_chromium_driver():
 
     s = Service(ChromeDriverManager().install())
     driver = webdriver.Chrome(
-        service=s, 
         options=options
     )
     driver.set_page_load_timeout(10)

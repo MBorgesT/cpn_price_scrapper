@@ -164,14 +164,14 @@ class Scrapper():
         writer = pd.ExcelWriter('result.xlsx', engine='xlsxwriter')
 
         print('\n\nScraping:')
-        for pt in self.catalog:
+        for pt in self.catalog: # product type
             df = pd.DataFrame(columns=['store', 'brand', 'amount_g', 'price', 'price_per_100g'])
             pt_name = self.product_type_dict[pt['product_type']]
 
             print(f'\t{pt_name}...')
             for store in reversed(self.store_name_dict.keys()):
                 for p in pt['stores'][store]:
-                    try: # hack to bypass infinite page loading, even though it's totally loaded
+                    try: # gambiarra to bypass infinite page loading, even though it's totally loaded
                         driver.get(p['link'])
                     except Exception:
                         pass
@@ -187,7 +187,7 @@ class Scrapper():
 
 
     def scrap_sql(self):
-        driver = crawler.get_chromium_driver()
+        driver = crawler.get_firefox_driver()
 
         today = datetime.today().strftime('%Y-%m-%d')
 
@@ -199,13 +199,13 @@ class Scrapper():
         line_list = []
 
         print(f'\n\nDate: {today}   Scraping:')
-        for pt in self.catalog:
+        for pt in self.catalog: # product type
             pt_name = self.product_type_dict[pt['product_type']]
 
             print(f'\t{pt_name}...')
             for store in self.store_name_dict.keys():
                 for p in pt['stores'][store]:
-                    try: # hack to bypass infinite page loading, even though it's totally loaded
+                    try: # gambiarra to bypass infinite page loading, even though it's totally loaded
                         driver.get(p['link'])
                     except Exception:
                         pass
