@@ -1,24 +1,29 @@
 import json
-import sys
+import os
 import pandas as pd
 from time import sleep
-import crawler
 from datetime import datetime
 import sqlalchemy as db
-from store_scrappers.auchan import AuchanScrapper
-from store_scrappers.continente import ContinenteScrapper
-from store_scrappers.pingo_doce import PingoDoceScrapper
+from alive_progress import alive_bar
+from miner import crawler
+from miner.store_files.auchan import AuchanScrapper
+from miner.store_files.continente import ContinenteScrapper
+from miner.store_files.pingo_doce import PingoDoceScrapper
 
 
 # parameters
 SLEEP_TIME = 5
 
 
+def clear():
+    os.system('cls' if os.name=='nt' else 'clear')
+
+
 class Scrapper:
 
     def __init__(self, jsons_folder):
         if jsons_folder is None:
-            jsons_folder = 'scrapper/jsons/'
+            jsons_folder = 'miner/jsons/'
             
         self._init_dicts(jsons_folder)
         self._init_website_scrappers()
@@ -53,29 +58,43 @@ class Scrapper:
             return self.website_scrappers[store].scrap(page_source, brand_code)
         else:
             raise Exception('Unexpected store code')
+
+
+    def _get_n_products_by_pt(self, pt):
+        for aux_pt in self.catalog:
+            if aux_pt['product_type'] == pt:
+                n = 0
+                for _, p_list in aux_pt['stores'].items():
+                    n += len(p_list)
+                return n
+        raise Exception('Invalid product type')
         
 
     def scrap(self):
         driver = crawler.get_firefox_driver()
         writer = pd.ExcelWriter('result.xlsx', engine='xlsxwriter')
 
+        clear()
         print('\n\nScraping:')
         for pt in self.catalog: # product type
             df = pd.DataFrame(columns=['store', 'brand', 'amount_g', 'price', 'price_per_100g'])
             pt_name = self.product_type_dict[pt['product_type']]
 
-            print(f'\t{pt_name}...')
-            for store in reversed(self.store_name_dict.keys()):
-                for p in pt['stores'][store]:
-                    try: # gambiarra to bypass infinite page loading, even though it's totally loaded
-                        driver.get(p['link'])
-                    except Exception:
-                        pass
-                    
-                    sleep(SLEEP_TIME)
-                    line = self._scrap_web_page(store, driver.page_source, brand_code=p['brand'])
-                    if line is not None:
-                        df = df.append(line, ignore_index=True)
+            print(f'\n\t{pt_name}...')
+            with alive_bar(self._get_n_products_by_pt(pt['product_type']), spinner='fish') as bar:
+                for store in reversed(self.store_name_dict.keys()):
+                    for p in pt['stores'][store]:
+                        try: # gambiarra to bypass infinite page loading, even though it's totally loaded
+                            driver.get(p['link'])
+                        except Exception:
+                            pass
+                        
+                        sleep(SLEEP_TIME)
+                        line = self._scrap_web_page(store, driver.page_source, brand_code=p['brand'])
+                        if line is not None:
+                            df = pd.concat([df, pd.DataFrame([line])], axis=0, ignore_index=True)
+
+                        bar()
 
             df.to_excel(writer, sheet_name=pt_name)
 
@@ -117,18 +136,3 @@ class Scrapper:
         query = db.insert(prices_table)
         connection.execute(query, line_list)
 
-
-if __name__ == '__main__':
-    argv = sys.argv
-    if len(argv) > 2:
-        raise Exception('This program can only receive one or no arguments')
-    elif len(argv) == 2:
-        jsons_path = argv[1]
-        json_flag = True
-    else:
-        json_flag = False
-
-    scrapper = Scrapper(jsons_path if json_flag else None)
-
-    scrapper.scrap()
-    

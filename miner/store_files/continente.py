@@ -1,6 +1,6 @@
 from bs4 import BeautifulSoup
 import re
-from store_scrappers.website_scrapper import WebsiteScrapper
+from miner.store_files.website_scrapper import WebsiteScrapper
 
 
 class ContinenteScrapper(WebsiteScrapper):
