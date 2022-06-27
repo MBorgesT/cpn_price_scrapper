@@ -4,7 +4,7 @@ import pandas as pd
 from time import sleep
 from datetime import datetime
 import sqlalchemy as db
-from alive_progress import alive_bar
+from tqdm import tqdm
 from miner import crawler
 from miner.store_files.auchan import AuchanScrapper
 from miner.store_files.continente import ContinenteScrapper
@@ -75,13 +75,13 @@ class Scrapper:
         writer = pd.ExcelWriter('result.xlsx', engine='xlsxwriter')
 
         clear()
-        print('\n\nScraping:')
+        print('Scraping:')
         for pt in self.catalog: # product type
             df = pd.DataFrame(columns=['store', 'brand', 'amount_g', 'price', 'price_per_100g'])
             pt_name = self.product_type_dict[pt['product_type']]
 
             print(f'\n\t{pt_name}...')
-            with alive_bar(self._get_n_products_by_pt(pt['product_type']), spinner='fish') as bar:
+            with tqdm(total=self._get_n_products_by_pt(pt['product_type'])) as pbar:
                 for store in reversed(self.store_name_dict.keys()):
                     for p in pt['stores'][store]:
                         try: # gambiarra to bypass infinite page loading, even though it's totally loaded
@@ -94,7 +94,7 @@ class Scrapper:
                         if line is not None:
                             df = pd.concat([df, pd.DataFrame([line])], axis=0, ignore_index=True)
 
-                        bar()
+                        pbar.update(1)
 
             df.to_excel(writer, sheet_name=pt_name)
 
