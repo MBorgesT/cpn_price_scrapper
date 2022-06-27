@@ -1,0 +1,1 @@
+pyinstaller.exe --onefile --console --path=C:\Users\matheus.borges\.conda\envs\localbase\Lib\site-packages run.py
