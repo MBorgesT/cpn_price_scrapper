@@ -1,5 +1,7 @@
 import json
 import os
+import sys
+import io
 import pandas as pd
 from time import sleep
 from datetime import datetime
@@ -12,11 +14,21 @@ from miner.store_files.pingo_doce import PingoDoceScrapper
 
 
 # parameters
-SLEEP_TIME = 5
+SLEEP_TIME = 6
 
 
 def clear():
     os.system('cls' if os.name=='nt' else 'clear')
+
+# Disable
+def blockPrint():
+    sys.stdout = io.BytesIO()
+    sys.stderr = io.BytesIO()
+
+# Restore
+def enablePrint():
+    sys.stdout = sys.__stdout__
+    sys.stderr = sys.__stdout__
 
 
 class Scrapper:
@@ -71,8 +83,12 @@ class Scrapper:
         
 
     def scrap(self):
-        driver = crawler.get_firefox_driver()
-        writer = pd.ExcelWriter('result.xlsx', engine='xlsxwriter')
+        driver = crawler.get_chromium_driver()
+        today = datetime.today().strftime('%Y-%m-%d')
+        try:
+            writer = pd.ExcelWriter(f'{today}-prices.xlsx', engine='xlsxwriter')
+        except PermissionError:
+            raise PermissionError('Please close the results file before running the program')
 
         clear()
         print('Scraping:')
@@ -82,14 +98,20 @@ class Scrapper:
 
             print(f'\n\t{pt_name}...')
             with tqdm(total=self._get_n_products_by_pt(pt['product_type'])) as pbar:
-                for store in reversed(self.store_name_dict.keys()):
+                for store in reversed(self.store_name_dict.keys()):      
+                    if store not in pt['stores'].keys():
+                        pbar.update(1)
+                        continue
+
                     for p in pt['stores'][store]:
                         try: # gambiarra to bypass infinite page loading, even though it's totally loaded
                             driver.get(p['link'])
                         except Exception:
                             pass
                         
-                        sleep(SLEEP_TIME)
+                        if store == 'pingo_doce':
+                            sleep(SLEEP_TIME)
+                        
                         line = self._scrap_web_page(store, driver.page_source, brand_code=p['brand'])
                         if line is not None:
                             df = pd.concat([df, pd.DataFrame([line])], axis=0, ignore_index=True)
@@ -102,7 +124,7 @@ class Scrapper:
 
 
     def scrap_sql(self):
-        driver = crawler.get_firefox_driver()
+        driver = crawler.get_chromium_driver()
 
         today = datetime.today().strftime('%Y-%m-%d')
 
@@ -125,7 +147,8 @@ class Scrapper:
                     except Exception:
                         pass
                     
-                    sleep(SLEEP_TIME)
+                    if store == 'pingo_doce':
+                        sleep(SLEEP_TIME)
 
                     line = self._scrap_web_page(store, driver.page_source, brand_code=p['brand'])
                     if line is not None:

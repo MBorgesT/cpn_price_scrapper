@@ -33,7 +33,7 @@ class PingoDoceScrapper(WebsiteScrapper):
             line['price'] = None
 
         try:
-            line['price_per_100g'] = price * (100 / amount)
+            line['price_per_100g'] = round(price * (100 / amount), 3)
         except Exception:
             line['price_per_100g'] = None
 
