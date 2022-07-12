@@ -11,6 +11,7 @@ from miner import crawler
 from miner.store_files.auchan import AuchanScrapper
 from miner.store_files.continente import ContinenteScrapper
 from miner.store_files.pingo_doce import PingoDoceScrapper
+from miner.store_files.yelnot_bitan import YelnotBitanScrapper
 
 
 # parameters
@@ -20,30 +21,20 @@ SLEEP_TIME = 6
 def clear():
     os.system('cls' if os.name=='nt' else 'clear')
 
-# Disable
-def blockPrint():
-    sys.stdout = io.BytesIO()
-    sys.stderr = io.BytesIO()
-
-# Restore
-def enablePrint():
-    sys.stdout = sys.__stdout__
-    sys.stderr = sys.__stdout__
-
 
 class Scrapper:
 
-    def __init__(self, jsons_folder):
+    def __init__(self, catalog, jsons_folder):
         if jsons_folder is None:
             jsons_folder = 'miner/jsons/'
             
-        self._init_dicts(jsons_folder)
+        self._init_dicts(catalog, jsons_folder)
         self._init_website_scrappers()
 
 
-    def _init_dicts(self, jsons_folder):
+    def _init_dicts(self, catalog, jsons_folder):
         # products
-        with open(f'{jsons_folder}catalog.json', 'r') as f:
+        with open(f'{jsons_folder}catalog_{catalog}.json', 'r') as f:
             self.catalog = json.load(f)
 
         # dicts
@@ -63,6 +54,8 @@ class Scrapper:
         self.website_scrappers['auchan'] = AuchanScrapper(self.brand_name_dict)
         self.website_scrappers['continente'] = ContinenteScrapper(self.brand_name_dict)
         self.website_scrappers['pingo_doce'] = PingoDoceScrapper(self.brand_name_dict)
+
+        self.website_scrappers['yelnot_bitan'] = YelnotBitanScrapper(None)
         
 
     def _scrap_web_page(self, store, page_source, brand_code):
@@ -80,13 +73,20 @@ class Scrapper:
                     n += len(p_list)
                 return n
         raise Exception('Invalid product type')
+
+
+    def _get_n_stores_by_product(self, product):
+        for aux_p in self.catalog:
+            if aux_p['product'] == product:
+                return len(aux_p['stores'])
+        raise Exception('Invalid store')
         
 
-    def scrap(self):
+    def scrap_portugal(self):
         driver = crawler.get_chromium_driver()
         today = datetime.today().strftime('%Y-%m-%d')
         try:
-            writer = pd.ExcelWriter(f'{today}-prices.xlsx', engine='xlsxwriter')
+            writer = pd.ExcelWriter(f'{today}-portugal-prices.xlsx', engine='xlsxwriter')
         except PermissionError:
             raise PermissionError('Please close the results file before running the program')
 
@@ -120,6 +120,46 @@ class Scrapper:
 
             df.to_excel(writer, sheet_name=pt_name)
 
+        writer.save()
+
+
+    def scrap_rest(self, country):
+        driver = crawler.get_chromium_driver()
+        today = datetime.today().strftime('%Y-%m-%d')
+        try:
+            writer = pd.ExcelWriter(f'{today}-{country}-prices.xlsx', engine='xlsxwriter')
+        except PermissionError:
+            raise PermissionError('Please close the results file before running the program')
+
+        clear()
+        df = pd.DataFrame(columns=['Product', 'Yelnot Bitan'])
+        print('Scraping:')
+        for product in self.catalog: # product
+            product_name = product['product']
+
+            line = dict()
+            line['Product'] = product_name
+            
+            print(f'\n\t{product_name}...')
+            total = self._get_n_stores_by_product(product['product'])
+            with tqdm(total=total) as pbar:
+                for store in product['stores']:
+                    try: # gambiarra to bypass infinite page loading, even though it's totally loaded
+                        driver.get(store['link'])
+                    except Exception:
+                        pass
+
+                    sleep(SLEEP_TIME)
+
+                    aux = self._scrap_web_page(store['name'], driver.page_source, None)
+                    line[self.store_name_dict[store['name']]] = aux
+
+                    pbar.update(1)
+
+            df = pd.concat([df, pd.DataFrame([line])], axis=0, ignore_index=True)
+
+
+        df.to_excel(writer)
         writer.save()
 
 

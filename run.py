@@ -13,10 +13,10 @@ if __name__ == '__main__':
         else:
             json_flag = False
 
-        scrapper = Scrapper(jsons_path if json_flag else None)
-        scrapper.scrap()
+        scrapper = Scrapper('israel', jsons_path if json_flag else None)
+        scrapper.scrap_rest('israel')
     except Exception as e:
         print('\n\n')
-        print(e)
+        raise e
 
     input('\n\n\nPress any key to end the program')
