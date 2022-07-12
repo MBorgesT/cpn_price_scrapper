@@ -298,5 +298,199 @@
                 }
             ]
         }
+    },
+    {
+        "product_type": "atum_posta_oleo",
+        "stores": {
+            "pingo_doce": [
+                {
+                    "brand": "costatum",
+                    "link": "https://mercadao.pt/store/pingo-doce/product/atum-em-oleo-costatum-110-g"
+                },
+                {
+                    "brand": "costatum",
+                    "link": "https://mercadao.pt/store/pingo-doce/product/atum-em-oleo-vegetal-costatum-385-g"
+                },
+                {
+                    "brand": "bom_petisco",
+                    "link": "https://mercadao.pt/store/pingo-doce/product/atum-em-oleo-bom-petisco-385-g"
+                },
+                {
+                    "brand": "bom_petisco",
+                    "link": "https://mercadao.pt/store/pingo-doce/product/atum-em-oleo-bom-petisco-120-g"
+                },
+                {
+                    "brand": "minerva",
+                    "link": "https://mercadao.pt/store/pingo-doce/product/atum-posta-em-oleo-minerva-120-g"
+                },
+                {
+                    "brand": "pingo_doce",
+                    "link": "https://mercadao.pt/store/pingo-doce/product/atum-posta-em-oleo-pingo-doce-120-g"
+                },
+                {
+                    "brand": "pingo_doce",
+                    "link": "https://mercadao.pt/store/pingo-doce/product/atum-posta-em-oleo-de-girassol-pingo-doce-385-g"
+                },
+                {
+                    "brand": "dorita",
+                    "link": "https://mercadao.pt/store/pingo-doce/product/atum-posta-em-oleo-vegetal-dorita-110-g"
+                },
+                {
+                    "brand": "homem_do_leme",
+                    "link": "https://mercadao.pt/store/pingo-doce/product/atum-posta-em-oleo-homem-do-leme-110-g"
+                },
+                {
+                    "brand": "homem_do_leme",
+                    "link": "https://mercadao.pt/store/pingo-doce/product/atum-posta-em-oleo-homem-do-leme-385-g"
+                },
+                {
+                    "brand": "vasco_da_gama",
+                    "link": "https://mercadao.pt/store/pingo-doce/product/atum-posta-em-oleo-vegetal-vasco-da-gama-120-g"
+                }
+            ],
+            "continente": [
+                {
+                    "brand": "bom_petisco",
+                    "link": "https://www.continente.pt/produto/atum-posta-em-oleo-bom-petisco-2003646.html?cgid=home"
+                },
+                {
+                    "brand": "alva",
+                    "link": "https://www.continente.pt/produto/atum-posta-em-oleo-alva-7279820.html?cgid=home"
+                },
+                {
+                    "brand": "bom_petisco",
+                    "link": "https://www.continente.pt/produto/atum-posta-em-oleo-bom-petisco-2003649.html?cgid=home"
+                },
+                {
+                    "brand": "bom_petisco",
+                    "link": "https://www.continente.pt/produto/atum-posta-em-oleo-bom-petisco-2533124.html?cgid=home"
+                },
+                {
+                    "brand": "a_poveira",
+                    "link": "https://www.continente.pt/produto/atum-posta-em-oleo-a-poveira-7447076.html?cgid=home"
+                },
+                {
+                    "brand": "continente",
+                    "link": "https://www.continente.pt/produto/atum-posta-em-oleo-vegetal-continente-7241151.html?cgid=home"
+                },
+                {
+                    "brand": "minerva",
+                    "link": "https://www.continente.pt/produto/atum-posta-em-oleo-minerva-7430568.html?cgid=home"
+                },
+                {
+                    "brand": "ribeira",
+                    "link": "https://www.continente.pt/produto/atum-posta-em-oleo-de-girassol-ribeira-6674509.html?cgid=home"
+                },
+                {
+                    "brand": "ribeira",
+                    "link": "https://www.continente.pt/produto/atum-posta-em-oleo-de-girassol-ribeira-6674526.html?cgid=home"
+                },
+                {
+                    "brand": "santa_catarina",
+                    "link": "https://www.continente.pt/produto/atum-posta-em-oleo-de-girassol-santa-catarina-2494480.html?cgid=home"
+                },
+                {
+                    "brand": "minerva",
+                    "link": "https://www.continente.pt/produto/atum-posta-em-oleo-minerva-7535228.html?cgid=home"
+                },
+                {
+                    "brand": "continente",
+                    "link": "https://www.continente.pt/produto/atum-posta-em-oleo-vegetal-continente-7241158.html?cgid=home"
+                },
+                {
+                    "brand": "santa_catarina",
+                    "link": "https://www.continente.pt/produto/atum-em-posta-em-oleo-de-girassol-santa-catarina-2620246.html?cgid=home"
+                },
+                {
+                    "brand": "bolina",
+                    "link": "https://www.continente.pt/produto/atum-posta-em-oleo-de-girassol-bolina-6818154.html?cgid=home"
+                },
+                {
+                    "brand": "a_poveira",
+                    "link": "https://www.continente.pt/produto/atum-posta-em-oleo-girassol-a-poveira-7157635.html?cgid=home"
+                },
+                {
+                    "brand": "bolina",
+                    "link": "https://www.continente.pt/produto/atum-posta-em-oleo-de-girassol-bolina-6818157.html?cgid=home"
+                }
+            ],
+            "auchan": [
+                {
+                    "brand": "auchan",
+                    "link": "https://www.auchan.pt/pt/alimentacao/mercearia/conservas/atum/atum-posta-auchan-em-oleo-120%2878%29g/686901.html"
+                },
+                {
+                    "brand": "a_poveira",
+                    "link": "https://www.auchan.pt/pt/alimentacao/mercearia/conservas/atum/atum-posta-poveira-em-oleo-120%2885%29g/3206687.html"
+                },
+                {
+                    "brand": "real_do_mar",
+                    "link": "https://www.auchan.pt/pt/alimentacao/mercearia/conservas/atum/atum-posta-poveira-em-oleo-120%2885%29g/3206687.html"
+                },
+                {
+                    "brand": "minerva",
+                    "link": "https://www.auchan.pt/pt/alimentacao/mercearia/conservas/atum/atum-posta-minerva-em-oleo-120%2878%29g/3284602.html"
+                },
+                {
+                    "brand": "bonito_dos_acores",
+                    "link": "https://www.auchan.pt/pt/alimentacao/mercearia/conservas/atum/atum-posta-bonito-dos-acores-em-oleo-120%2878%29g/2608378.html"
+                },
+                {
+                    "brand": "sagres",
+                    "link": "https://www.auchan.pt/pt/alimentacao/mercearia/conservas/atum/atum-posta-sagres-em-oleo-de-girassol-385%28250%29g/3094649.html"
+                }
+            ]
+        }
+    },
+    {
+        "product_type": "sardinha_oleo",
+        "stores": {
+            "pingo_doce": [
+                {
+                    "brand": "pingo_doce",
+                    "link": "https://mercadao.pt/store/pingo-doce/product/sardinha-em-oleo-pingo-doce-120-g"
+                },
+                {
+                    "brand": "bom_petisco",
+                    "link": "https://mercadao.pt/store/pingo-doce/product/sardinha-em-oleo-bom-petisco-120-g"
+                },
+                {
+                    "brand": "vasco_da_gama",
+                    "link": "https://mercadao.pt/store/pingo-doce/product/sardinha-em-oleo-vasco-da-gama-120-g"
+                },
+                {
+                    "brand": "dorita",
+                    "link": "https://mercadao.pt/store/pingo-doce/product/sardinhas-em-oleo-vegetal-dorita-120-g"
+                }
+            ],
+            "continente": [
+                {
+                    "brand": "alva",
+                    "link": "https://www.continente.pt/produto/sardinha-inteira-em-oleo-alva-7279839.html?cgid=home"
+                },
+                {
+                    "brand": "lider",
+                    "link": "https://www.continente.pt/produto/sardinha-em-oleo-lider-2003656.html?cgid=home"
+                },
+                {
+                    "brand": "bom_petisco",
+                    "link": "https://www.continente.pt/produto/sardinha-em-oleo-bom-petisco-6629255.html?cgid=home"
+                }
+            ],
+            "auchan": [
+                {
+                    "brand": "ramirez",
+                    "link": "https://www.auchan.pt/pt/alimentacao/mercearia/conservas/sardinha/sardinha-ramirez-em-oleo-125%2888%29g/16942.html"
+                },
+                {
+                    "brand": "bom_petisco",
+                    "link": "https://www.auchan.pt/pt/alimentacao/mercearia/conservas/sardinha/sardinha-inteira-bom-petisco-em-oleo-120%2884%29g/2986255.html"
+                },
+                {
+                    "brand": "general",
+                    "link": "https://www.auchan.pt/pt/alimentacao/mercearia/conservas/sardinha/sardinha-general-em-oleo-125%2888%29g/485966.html"
+                }
+            ]
+        }
     }
 ]
