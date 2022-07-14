@@ -45,7 +45,7 @@
         ]
     },
     {
-        "product": "Willy sardinhas em Food em oleo de soja 85g",
+        "product": "Willy Food sardinhas em oleo de soja 85g",
         "stores": [
             {
                 "name": "yelnot_bitan",
@@ -54,11 +54,16 @@
         ]
     },
     {
-        "product": "Willy sardinhas em Food em oleo de vegetal picante 85g",
+        "product": "Willy Food sardinhas em oleo de vegetal picante 85g",
         "stores": [
             {
                 "name": "yelnot_bitan",
                 "link": "https://www.ybitan.co.il/categories/81577/products?filters=%7B%22family%22:%5B859%5D%7D&catalogProduct=11792"
+            },
+            {
+                "name": "hazi_hinam",
+                "link": "https://shop.hazi-hinam.co.il/#/catalog?viewMode=category_targeting&categoryId=84&subCategoryId=11184",
+                "product_name": " סרדינים בשמן צמחי עם פלפל חריף "
             }
         ]
     },
@@ -98,7 +103,6 @@
             }
         ]
     },
-
     {
         "product": "The Olive Tree fillets de atum em azeite defumado 84g",
         "stores": [
@@ -173,15 +177,6 @@
     },
     {
         "product": "Topics fillets de atum em oleo 98g",
-        "stores": [
-            {
-                "name": "yelnot_bitan",
-                "link": "https://www.ybitan.co.il/categories/81577/products?filters=%7B%22family%22:%5B715%5D%7D&catalogProduct=1493236"
-            }
-        ]
-    },
-    {
-        "product": "Williger fillets de atum em oleo 98g",
         "stores": [
             {
                 "name": "yelnot_bitan",

@@ -2,6 +2,7 @@ import json
 import os
 import sys
 import io
+from attrs import asdict
 import pandas as pd
 from time import sleep
 from datetime import datetime
@@ -12,6 +13,7 @@ from miner.store_files.auchan import AuchanScrapper
 from miner.store_files.continente import ContinenteScrapper
 from miner.store_files.pingo_doce import PingoDoceScrapper
 from miner.store_files.yelnot_bitan import YelnotBitanScrapper
+from miner.store_files.hazi_hinam import HaziHinamScrapper
 
 
 # parameters
@@ -34,7 +36,7 @@ class Scrapper:
 
     def _init_dicts(self, catalog, jsons_folder):
         # products
-        with open(f'{jsons_folder}catalog_{catalog}.json', 'r') as f:
+        with open(f'{jsons_folder}catalog_{catalog}.json', 'r', encoding='utf-8') as f:
             self.catalog = json.load(f)
 
         # dicts
@@ -56,6 +58,7 @@ class Scrapper:
         self.website_scrappers['pingo_doce'] = PingoDoceScrapper(self.brand_name_dict)
 
         self.website_scrappers['yelnot_bitan'] = YelnotBitanScrapper(None)
+        self.website_scrappers['hazi_hinam'] = HaziHinamScrapper(None)
         
 
     def _scrap_web_page(self, store, page_source, brand_code):
@@ -123,7 +126,7 @@ class Scrapper:
         writer.save()
 
 
-    def scrap_rest(self, country):
+    def scrap_israel(self, country):
         driver = crawler.get_chromium_driver()
         today = datetime.today().strftime('%Y-%m-%d')
         try:
@@ -132,7 +135,7 @@ class Scrapper:
             raise PermissionError('Please close the results file before running the program')
 
         clear()
-        df = pd.DataFrame(columns=['Product', 'Yelnot Bitan'])
+        df = pd.DataFrame(columns=['Product', 'Yelnot Bitan', 'Hazi Hinam'])
         print('Scraping:')
         for product in self.catalog: # product
             product_name = product['product']
@@ -150,9 +153,9 @@ class Scrapper:
                         pass
 
                     sleep(SLEEP_TIME)
-
-                    aux = self._scrap_web_page(store['name'], driver.page_source, None)
-                    line[self.store_name_dict[store['name']]] = aux
+                    
+                    brand_code = store['product_name'] if store['name'] == 'hazi_hinam' else None
+                    line[self.store_name_dict[store['name']]] = self._scrap_web_page(store['name'], driver.page_source, brand_code)
 
                     pbar.update(1)
 

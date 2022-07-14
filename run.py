@@ -14,7 +14,7 @@ if __name__ == '__main__':
             json_flag = False
 
         scrapper = Scrapper('israel', jsons_path if json_flag else None)
-        scrapper.scrap_rest('israel')
+        scrapper.scrap_israel('israel')
     except Exception as e:
         print('\n\n')
         raise e
