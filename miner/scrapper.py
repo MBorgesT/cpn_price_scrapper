@@ -2,6 +2,7 @@ import json
 import os
 import sys
 import io
+import time
 from attrs import asdict
 import pandas as pd
 from time import sleep
@@ -14,6 +15,7 @@ from miner.store_files.continente import ContinenteScrapper
 from miner.store_files.pingo_doce import PingoDoceScrapper
 from miner.store_files.yelnot_bitan import YelnotBitanScrapper
 from miner.store_files.hazi_hinam import HaziHinamScrapper
+from miner.store_files.shufersal import ShufersalScrapper
 
 
 # parameters
@@ -59,6 +61,7 @@ class Scrapper:
 
         self.website_scrappers['yelnot_bitan'] = YelnotBitanScrapper(None)
         self.website_scrappers['hazi_hinam'] = HaziHinamScrapper(None)
+        self.website_scrappers['shufersal'] = ShufersalScrapper(None)
         
 
     def _scrap_web_page(self, store, page_source, brand_code):
@@ -78,12 +81,24 @@ class Scrapper:
         raise Exception('Invalid product type')
 
 
-    def _get_n_stores_by_product(self, product):
-        for aux_p in self.catalog:
-            if aux_p['product'] == product:
-                return len(aux_p['stores'])
-        raise Exception('Invalid store')
+    def _get_shufersal_html(self, driver):
+        driver.get('https://www.shufersal.co.il/online/he/%D7%A7%D7%98%D7%92%D7%95%D7%A8%D7%99%D7%95%D7%AA/%D7%A1%D7%95%D7%A4%D7%A8%D7%9E%D7%A8%D7%A7%D7%98/%D7%91%D7%99%D7%A9%D7%95%D7%9C-%D7%90%D7%A4%D7%99%D7%94-%D7%95%D7%A9%D7%99%D7%9E%D7%95%D7%A8%D7%99%D7%9D/%D7%A9%D7%99%D7%9E%D7%95%D7%A8%D7%99%D7%9D/c/A2217?q=:relevance:categories-4:A221716')
         
+        last_height = driver.execute_script("return document.body.scrollHeight")
+        while True:
+            # Scroll down to bottom
+            driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+
+            # Wait to load page
+            time.sleep(2)
+
+            # Calculate new scroll height and compare with last scroll height
+            new_height = driver.execute_script("return document.body.scrollHeight")
+            if new_height == last_height:
+                break
+            last_height = new_height
+
+        return driver.page_source
 
     def scrap_portugal(self):
         driver = crawler.get_chromium_driver()
@@ -134,33 +149,44 @@ class Scrapper:
         except PermissionError:
             raise PermissionError('Please close the results file before running the program')
 
+        shufersal_page_source = self._get_shufersal_html(driver)
+
         clear()
-        df = pd.DataFrame(columns=['Product', 'Yelnot Bitan', 'Hazi Hinam'])
-        print('Scraping:')
-        for product in self.catalog: # product
-            product_name = product['product']
-
-            line = dict()
-            line['Product'] = product_name
-            
-            print(f'\n\t{product_name}...')
-            total = self._get_n_stores_by_product(product['product'])
-            with tqdm(total=total) as pbar:
+        df = pd.DataFrame(columns=['Brand', 'Fish', 'Product', 'Yelnot Bitan', 'Hazi Hinam'])
+        print('\tScraping...')
+        with tqdm(total=len(self.catalog)) as pbar:
+            for product in self.catalog: # product
+                line = dict()
+                line['Brand'] = product['product']
+                line['Fish'] = product['fish']
+                line['Product'] = product['brand']
+                
                 for store in product['stores']:
-                    try: # gambiarra to bypass infinite page loading, even though it's totally loaded
-                        driver.get(store['link'])
-                    except Exception:
-                        pass
-
-                    sleep(SLEEP_TIME)
+                    if store['name'] == 'shufersal':
+                        page_source = shufersal_page_source
+                    else:
+                        try: # gambiarra to bypass infinite page loading, even though it's totally loaded
+                            driver.get(store['link'])
+                        except Exception:
+                            pass
+                        sleep(SLEEP_TIME)
+                        page_source = driver.page_source
+                        
+                    if store['name'] == 'yelnot_bitan':
+                        brand_code = None
+                    elif store['name'] == 'hazi_hinam':
+                        brand_code = store['product_name']
+                    else: # shufersal:
+                        brand_code = (store['brand_code'], store['product_name'])
                     
-                    brand_code = store['product_name'] if store['name'] == 'hazi_hinam' else None
-                    line[self.store_name_dict[store['name']]] = self._scrap_web_page(store['name'], driver.page_source, brand_code)
+                    line[self.store_name_dict[store['name']]] = self._scrap_web_page(
+                        store['name'], 
+                        page_source, 
+                        brand_code
+                    )
 
-                    pbar.update(1)
-
-            df = pd.concat([df, pd.DataFrame([line])], axis=0, ignore_index=True)
-
+                df = pd.concat([df, pd.DataFrame([line])], axis=0, ignore_index=True)
+                pbar.update(1)
 
         df.to_excel(writer)
         writer.save()
