@@ -1,22 +1,5 @@
 [
     {
-        "brand": "Porthos",
-        "fish": "Sardinhas",
-        "product": "em oleo de girassol 125g",
-        "stores": [
-            {
-                "name": "hazi_hinam",
-                "link": "https://shop.hazi-hinam.co.il/#/catalog?viewMode=category_targeting&categoryId=84&subCategoryId=11184",
-                "product_name": " סרדינים בשמן חמניות "
-            },
-            {
-                "name": "shufersal",
-                "product_name": "סרדינים בשמן חמניות",
-                "brand_code": "פורטוס"
-            }
-        ]
-    },
-    {
         "brand": "Tomer",
         "fish": "Sardinhas",
         "product": "em oleo de girassol 125g",
@@ -245,6 +228,23 @@
         ]
     },
     {
+        "brand": "Porthos",
+        "fish": "Sardinhas",
+        "product": "em oleo de girassol 125g",
+        "stores": [
+            {
+                "name": "hazi_hinam",
+                "link": "https://shop.hazi-hinam.co.il/#/catalog?viewMode=category_targeting&categoryId=84&subCategoryId=11184",
+                "product_name": " סרדינים בשמן חמניות "
+            },
+            {
+                "name": "shufersal",
+                "product_name": "סרדינים בשמן חמניות",
+                "brand_code": "פורטוס"
+            }
+        ]
+    },
+    {
         "brand": "Tasty",
         "fish": "Sardinhas",
         "product": "em molho de tomate 125g",
@@ -313,6 +313,66 @@
                 "name": "hazi_hinam",
                 "link": "https://shop.hazi-hinam.co.il/#/catalog?viewMode=category_targeting&categoryId=84&subCategoryId=11184",
                 "product_name": " סרדינים בשמן חריף "
+            }
+        ]
+    },
+    {
+        "brand": "Shufersal",
+        "fish": "Sardinhas",
+        "product": "em oleo de girassol 125g",
+        "stores": [
+            {
+                "name": "shufersal",
+                "product_name": "סרדינים בשמן חמניות",
+                "brand_code": "שופרסל"
+            }
+        ]
+    },
+    {
+        "brand": "Shufersal",
+        "fish": "Sardinhas",
+        "product": "em oleo de girassol e limao 125g",
+        "stores": [
+            {
+                "name": "shufersal",
+                "product_name": "סרדינים בשמן חמניות+לימון",
+                "brand_code": "שופרסל"
+            }
+        ]
+    },
+    {
+        "brand": "Shufersal",
+        "fish": "Sardinhas",
+        "product": "em oleo de girassol picante 125g",
+        "stores": [
+            {
+                "name": "shufersal",
+                "product_name": "סרדינים בשמן חמניות חריף",
+                "brand_code": "שופרסל"
+            }
+        ]
+    },
+    {
+        "brand": "Shufersal",
+        "fish": "Sardinhas",
+        "product": "em agua 125g",
+        "stores": [
+            {
+                "name": "shufersal",
+                "product_name": "סרדינים במי מלח שופרסל",
+                "brand_code": "שופרסל"
+            }
+        ]
+    },
+    {
+        "brand": "Shufersal",
+        "fish": "Sardinhas",
+        "product": "em molho de tomate 125g",
+        "stores": [
+            {
+                "name": "shufersal",
+                "product_name": "סרדינים ברוטב עגבניות",
+                "brand_code": "שופרסל"
             }
         ]
     },
@@ -570,6 +630,42 @@
                 "name": "hazi_hinam",
                 "link": "https://shop.hazi-hinam.co.il/#/catalog?viewMode=category_targeting&categoryId=84&subCategoryId=11185",
                 "product_name": " טונה בהירה בשמן צמחי ומלח "
+            }
+        ]
+    },
+    {
+        "brand": "Shufersal",
+        "fish": "Atum",
+        "product": "em azeite e limao 190g",
+        "stores": [
+            {
+                "name": "shufersal",
+                "product_name": "טונה בשמן זית + לימון",
+                "brand_code": "שופרסל"
+            }
+        ]
+    },
+    {
+        "brand": "Shufersal",
+        "fish": "Atum",
+        "product": "em azeite 190g",
+        "stores": [
+            {
+                "name": "shufersal",
+                "product_name": "טונה זהובה בשמן זית",
+                "brand_code": "שופרסל"
+            }
+        ]
+    },
+    {
+        "brand": "Shufersal",
+        "fish": "Atum",
+        "product": "em azeite com pimenta 190g",
+        "stores": [
+            {
+                "name": "shufersal",
+                "product_name": "טונה בשמן זית עם צ'ילי",
+                "brand_code": "שופרסל"
             }
         ]
     }
