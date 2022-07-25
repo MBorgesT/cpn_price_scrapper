@@ -1,3 +1,4 @@
+import os
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.firefox import GeckoDriverManager
@@ -19,7 +20,7 @@ def get_firefox_driver():
     return driver
 
 
-def get_chromium_driver():
+def get_chromium_driver():    
     options = webdriver.ChromeOptions()
     options.add_argument('--width=1200')
     options.add_argument('--height=700')
@@ -30,11 +31,13 @@ def get_chromium_driver():
     options.add_argument('--disable-dev-shm-usage')
     options.add_argument('log-level=3')
 
-    #s = Service(ChromeDriverManager().install())
+    options.add_experimental_option('excludeSwitches', ['enable-logging'])
+
     driver = webdriver.Chrome(
         ChromeDriverManager().install(),
         options=options
     )
     driver.set_page_load_timeout(10)
+
     return driver
 

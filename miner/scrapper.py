@@ -100,6 +100,12 @@ class Scrapper:
 
         return driver.page_source
 
+
+    def _get_hazi_hinam_html(self, driver):
+        driver.get('https://shop.hazi-hinam.co.il/#/catalog?viewMode=category_targeting&categoryId=84&subCategoryId=11184')
+        return driver.page_source
+
+
     def scrap_portugal(self):
         driver = crawler.get_chromium_driver()
         today = datetime.today().strftime('%Y-%m-%d')
@@ -141,15 +147,16 @@ class Scrapper:
         writer.save()
 
 
-    def scrap_israel(self, country):
+    def scrap_israel(self):
         driver = crawler.get_chromium_driver()
         today = datetime.today().strftime('%Y-%m-%d')
         try:
-            writer = pd.ExcelWriter(f'{today}-{country}-prices.xlsx', engine='xlsxwriter')
+            writer = pd.ExcelWriter(f'{today}-israel-prices.xlsx', engine='xlsxwriter')
         except PermissionError:
             raise PermissionError('Please close the results file before running the program')
 
         shufersal_page_source = self._get_shufersal_html(driver)
+        #hazi_hinam_page_source = self._get_hazi_hinam_html(driver)
 
         clear()
         df = pd.DataFrame(columns=['Brand', 'Fish', 'Product', 'Yelnot Bitan', 'Hazi Hinam'])
@@ -157,9 +164,9 @@ class Scrapper:
         with tqdm(total=len(self.catalog)) as pbar:
             for product in self.catalog: # product
                 line = dict()
-                line['Brand'] = product['product']
+                line['Brand'] = product['brand']
                 line['Fish'] = product['fish']
-                line['Product'] = product['brand']
+                line['Product'] = product['product']
                 
                 for store in product['stores']:
                     if store['name'] == 'shufersal':
@@ -179,11 +186,13 @@ class Scrapper:
                     else: # shufersal:
                         brand_code = (store['brand_code'], store['product_name'])
                     
-                    line[self.store_name_dict[store['name']]] = self._scrap_web_page(
+                    result = self._scrap_web_page(
                         store['name'], 
                         page_source, 
                         brand_code
                     )
+                    if result is not None:
+                        line[self.store_name_dict[store['name']]] = result
 
                 df = pd.concat([df, pd.DataFrame([line])], axis=0, ignore_index=True)
                 pbar.update(1)

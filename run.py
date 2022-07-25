@@ -3,7 +3,23 @@ from miner.scrapper import Scrapper
 
 
 if __name__ == '__main__':
+    while True:
+        print('Selecione o país a ser escaneado:')
+        print('1 - Portugal')
+        print('2 - Israel')
+        op = input('Opção: ')
+
+        if op == '1':
+            country_param = 'portugal'
+            break
+        elif op == '2':
+            country_param = 'israel'
+            break
+        else:
+            print('\nOpção inválida. Favor selecionar alguma das listadas.\n')
+
     try:
+        print('\nLoading modules...')
         argv = sys.argv
         if len(argv) > 2:
             raise Exception('This program can only receive one or no arguments')
@@ -13,10 +29,13 @@ if __name__ == '__main__':
         else:
             json_flag = False
 
-        scrapper = Scrapper('israel', jsons_path if json_flag else None)
-        scrapper.scrap_israel('israel')
+        scrapper = Scrapper(country_param, jsons_path if json_flag else None)
+        if country_param == 'portugal':
+            scrapper.scrap_portugal()
+        elif country_param == 'israel':
+            scrapper.scrap_israel()
     except Exception as e:
         print('\n\n')
         raise e
 
-    input('\n\n\nPress any key to end the program')
+    input('\n\nPressione qualquer tecla para terminar o programa')

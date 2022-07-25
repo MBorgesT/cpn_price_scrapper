@@ -9,8 +9,6 @@ class HaziHinamScrapper(WebsiteScrapper):
     def scrap(self, page_source, brand_code):
         bs = BeautifulSoup(page_source, 'lxml')
 
-        #cell = bs.find('h3', text=brand_code).parent.parent
-
         cell = None
         for cube in bs.find('div', {'class': 'product_cubes'}).findChildren('app-product-cube', recursive=False):
             product_name_tag = cube.find('h3', {'class': 'product-cube-name'})
@@ -18,7 +16,7 @@ class HaziHinamScrapper(WebsiteScrapper):
                 cell = cube
                 break
         if cell == None:
-            raise Exception('Null cell')
+            return None
 
         price_str = cell.find('div', {'class': 'product_cube-price'}).text
         price_str = ''.join([c for c in price_str if c in '0123456789.,'])

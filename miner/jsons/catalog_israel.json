@@ -91,6 +91,11 @@
                 "name": "hazi_hinam",
                 "link": "https://shop.hazi-hinam.co.il/#/catalog?viewMode=category_targeting&categoryId=84&subCategoryId=11184",
                 "product_name": " סרדינים בשמן חמניות "
+            },
+            {
+                "name": "shufersal",
+                "product_name": "סרדין רוברט בשמן חמניות",
+                "brand_code": "רוברט"
             }
         ]
     },
@@ -107,6 +112,11 @@
                 "name": "hazi_hinam",
                 "link": "https://shop.hazi-hinam.co.il/#/catalog?viewMode=category_targeting&categoryId=84&subCategoryId=11184",
                 "product_name": " סרדינים בשמן זית "
+            },
+            {
+                "name": "shufersal",
+                "product_name": "סרדינים בשמן זית רוברט",
+                "brand_code": "רוברט"
             }
         ]
     },
@@ -125,7 +135,7 @@
     {
         "brand": "Willy Food",
         "fish": "Sardinhas",
-        "product": "em oleo de soja 85g",
+        "product": "em oleo de soja 120g",
         "stores": [
             {
                 "name": "yelnot_bitan",
@@ -135,13 +145,18 @@
                 "name": "hazi_hinam",
                 "link": "https://shop.hazi-hinam.co.il/#/catalog?viewMode=category_targeting&categoryId=84&subCategoryId=11184",
                 "product_name": " סרדינים בשמן צמחי "
+            },
+            {
+                "name": "shufersal",
+                "product_name": "סרדין בשמן סויה פתח-קל",
+                "brand_code": "וילי פוד"
             }
         ]
     },
     {
         "brand": "Willy Food",
         "fish": "Sardinhas",
-        "product": "em oleo vegetal picante 85g",
+        "product": "em oleo vegetal picante 120g",
         "stores": [
             {
                 "name": "yelnot_bitan",
@@ -151,6 +166,11 @@
                 "name": "hazi_hinam",
                 "link": "https://shop.hazi-hinam.co.il/#/catalog?viewMode=category_targeting&categoryId=84&subCategoryId=11184",
                 "product_name": " סרדינים בשמן צמחי עם פלפל חריף "
+            },
+            {
+                "name": "shufersal",
+                "product_name": "סרדין פיקנטי בשמן צמחי",
+                "brand_code": "וילי פוד"
             }
         ]
     },
@@ -163,6 +183,16 @@
                 "name": "hazi_hinam",
                 "link": "https://shop.hazi-hinam.co.il/#/catalog?viewMode=category_targeting&categoryId=84&subCategoryId=11184",
                 "product_name": " סרדינים ברוטב עגבניות "
+            },
+            {
+                "name": "shufersal",
+                "product_name": "סרדין פיקנטי בשמן צמחי",
+                "brand_code": "וילי פוד"
+            },
+            {
+                "name": "shufersal",
+                "product_name": "סרדין ברוטב עגבניות פ\"ק",
+                "brand_code": "וילי פוד"
             }
         ]
     },
@@ -377,6 +407,54 @@
         ]
     },
     {
+        "brand": "Shufersal",
+        "fish": "Sardinhas",
+        "product": "em azeite 125g",
+        "stores": [
+            {
+                "name": "shufersal",
+                "product_name": "סרדינים בשמן זית שופרסל",
+                "brand_code": "שופרסל"
+            }
+        ]
+    },
+    {
+        "brand": "Neptune",
+        "fish": "Sardinhas",
+        "product": "em azeite 115g",
+        "stores": [
+            {
+                "name": "shufersal",
+                "product_name": "סרדין בשמן זית נפטון",
+                "brand_code": "נפטון"
+            }
+        ]
+    },
+    {
+        "brand": "Neptune",
+        "fish": "Sardinhas",
+        "product": "em oleo de soja 115g",
+        "stores": [
+            {
+                "name": "shufersal",
+                "product_name": "סרדין בשמן סויה נפטון",
+                "brand_code": "נפטון"
+            }
+        ]
+    },
+    {
+        "brand": "Neptune",
+        "fish": "Sardinhas",
+        "product": "em oleo de soja picante 115g",
+        "stores": [
+            {
+                "name": "shufersal",
+                "product_name": "סרדין בשמן סויה חריף",
+                "brand_code": "נפטון"
+            }
+        ]
+    },
+    {
         "brand": "Tomer",
         "fish": "Cavala",
         "product": "em oleo de girassol 125g",
@@ -443,18 +521,23 @@
     {
         "brand": "The Olive Tree",
         "fish": "Atum",
-        "product": "fillets em azeite defumado 100g",
+        "product": "fillets em azeite defumado 120g",
         "stores": [
             {
                 "name": "yelnot_bitan",
                 "link": "https://www.ybitan.co.il/categories/81577/products?filters=%7B%22family%22:%5B715%5D%7D&catalogProduct=2598863"
+            },
+            {
+                "name": "shufersal",
+                "product_name": "פילה טונה פרוס מעושן",
+                "brand_code": "עץ הזית"
             }
         ]
     },
     {
         "brand": "The Olive Tree",
         "fish": "Atum",
-        "product": "fillets em azeite 100g",
+        "product": "fillets em azeite 120g",
         "stores": [
             {
                 "name": "yelnot_bitan",
@@ -464,17 +547,39 @@
                 "name": "hazi_hinam",
                 "link": "https://shop.hazi-hinam.co.il/#/catalog?viewMode=category_targeting&categoryId=84&subCategoryId=11185",
                 "product_name": " נתחי טונה בהירה בשמן זית "
+            },
+            {
+                "name": "shufersal",
+                "product_name": "פילה טונה פרוס+שמן זית",
+                "brand_code": "עץ הזית"
             }
         ]
     },
     {
         "brand": "The Olive Tree",
         "fish": "Atum",
-        "product": "fillets limao e pimenta preta 100g",
+        "product": "fillets limao e pimenta preta 120g",
         "stores": [
             {
                 "name": "yelnot_bitan",
                 "link": "https://www.ybitan.co.il/categories/81577/products?filters=%7B%22family%22:%5B715%5D%7D&catalogProduct=3841609"
+            },
+            {
+                "name": "shufersal",
+                "product_name": "פילה פרוס טעם מעושן",
+                "brand_code": "עץ הזית"
+            }
+        ]
+    },
+    {
+        "brand": "The Olive Tree",
+        "fish": "Atum",
+        "product": "fillets em azeite 2 x 160g",
+        "stores": [
+            {
+                "name": "shufersal",
+                "product_name": "נתחי טונה בשמן זית",
+                "brand_code": "עץ הזית"
             }
         ]
     },
@@ -516,7 +621,7 @@
     {
         "brand": "Poseidon",
         "fish": "Atum",
-        "product": "fillets em oleo 4 x 77g",
+        "product": "fillets em azeite 4 x 108g",
         "stores": [
             {
                 "name": "yelnot_bitan",
@@ -526,13 +631,30 @@
                 "name": "hazi_hinam",
                 "link": "https://shop.hazi-hinam.co.il/#/catalog?viewMode=category_targeting&categoryId=84&subCategoryId=11185",
                 "product_name": " נתחי טונה בהירה בשמן - מארז 4 יח' "
+            },
+            {
+                "name": "shufersal",
+                "product_name": "מארז טונה פוסידון בשמן",
+                "brand_code": "פוסידון"
             }
         ]
     },
     {
         "brand": "Poseidon",
         "fish": "Atum",
-        "product": "fillets em oleo 77g",
+        "product": "fillets em oleo vegetal 4 x 108g",
+        "stores": [
+            {
+                "name": "shufersal",
+                "product_name": "טונה בשמן צמחי",
+                "brand_code": "פיל טונה"
+            }
+        ]
+    },
+    {
+        "brand": "Poseidon",
+        "fish": "Atum",
+        "product": "fillets em azeite 108g",
         "stores": [
             {
                 "name": "yelnot_bitan",
@@ -541,7 +663,7 @@
         ]
     },
     {
-        "brand": "Filtuna (Piltona)",
+        "brand": "Filtuna",
         "fish": "Atum",
         "product": "fillets em oleo 4 x 77g",
         "stores": [
@@ -552,13 +674,61 @@
         ]
     },
     {
-        "brand": "Filtuna (Piltona)",
+        "brand": "Filtuna",
         "fish": "Atum",
         "product": "fillets em oleo 158g",
         "stores": [
             {
                 "name": "yelnot_bitan",
                 "link": "https://www.ybitan.co.il/categories/81577/products?filters=%7B%22family%22:%5B715%5D%7D&catalogProduct=22349"
+            }
+        ]
+    },
+    {
+        "brand": "Filtuna",
+        "fish": "Atum",
+        "product": "em azeite 4 x 158g",
+        "stores": [
+            {
+                "name": "shufersal",
+                "product_name": "טונה בשמן זית מארז",
+                "brand_code": "פיל טונה"
+            }
+        ]
+    },
+    {
+        "brand": "Filtuna",
+        "fish": "Atum",
+        "product": "em oleo vegetal 4 x 158g",
+        "stores": [
+            {
+                "name": "shufersal",
+                "product_name": "טונה בשמן צמחי מארז",
+                "brand_code": "פיל טונה"
+            }
+        ]
+    },
+    {
+        "brand": "Filtuna",
+        "fish": "Atum",
+        "product": "em oleo de canola 4 x 158g",
+        "stores": [
+            {
+                "name": "shufersal",
+                "product_name": "טונה בשמן קנולה מארז",
+                "brand_code": "פיל טונה"
+            }
+        ]
+    },
+    {
+        "brand": "Filtuna",
+        "fish": "Atum",
+        "product": "em agua 4 x 158g",
+        "stores": [
+            {
+                "name": "shufersal",
+                "product_name": "טונה במי מלח מארז",
+                "brand_code": "פיל טונה"
             }
         ]
     },
@@ -582,6 +752,11 @@
                 "name": "hazi_hinam",
                 "link": "https://shop.hazi-hinam.co.il/#/catalog?viewMode=category_targeting&categoryId=84&subCategoryId=11185",
                 "product_name": " טונה בהירה בשמן זית "
+            },
+            {
+                "name": "shufersal",
+                "product_name": "נתחי טונה צהובה בשמן זית",
+                "brand_code": "אורטיז"
             }
         ]
     },
@@ -666,6 +841,222 @@
                 "name": "shufersal",
                 "product_name": "טונה בשמן זית עם צ'ילי",
                 "brand_code": "שופרסל"
+            }
+        ]
+    },
+    {
+        "brand": "Shufersal",
+        "fish": "Atum",
+        "product": "em oleo de soja 4 x 160g",
+        "stores": [
+            {
+                "name": "shufersal",
+                "product_name": "נתחי טונה בהירה בשמן",
+                "brand_code": "שופרסל"
+            }
+        ]
+    },
+    {
+        "brand": "Shufersal",
+        "fish": "Atum",
+        "product": "em agua 4 x 160g",
+        "stores": [
+            {
+                "name": "shufersal",
+                "product_name": "מארז נתחי טונה במי מלח",
+                "brand_code": "שופרסל"
+            }
+        ]
+    },
+    {
+        "brand": "Shufersal",
+        "fish": "Atum",
+        "product": "em oleo de canola 4 x 160g",
+        "stores": [
+            {
+                "name": "shufersal",
+                "product_name": "טונה בשמן קנולה מארז",
+                "brand_code": "שופרסל"
+            }
+        ]
+    },
+    {
+        "brand": "Star Kist",
+        "fish": "Atum",
+        "product": "em agua 4 x 160g",
+        "stores": [
+            {
+                "name": "shufersal",
+                "product_name": "טונה סטארקיסט במים מארז",
+                "brand_code": "סטארקיסט"
+            }
+        ]
+    },
+    {
+        "brand": "Star Kist",
+        "fish": "Atum",
+        "product": "em azeite 4 x 160g",
+        "stores": [
+            {
+                "name": "shufersal",
+                "product_name": "טונה  בשמן סטארקיסט מארז",
+                "brand_code": "סטארקיסט"
+            }
+        ]
+    },
+    {
+        "brand": "Star Kist",
+        "fish": "Atum",
+        "product": "em oleo de canola 4 x 160g",
+        "stores": [
+            {
+                "name": "shufersal",
+                "product_name": "טונה סטארקיסט בשמן קנולה",
+                "brand_code": "סטארקיסט"
+            }
+        ]
+    },
+    {
+        "brand": "Star Kist",
+        "fish": "Atum",
+        "product": "em oleo de canola 4 x 140g",
+        "stores": [
+            {
+                "name": "shufersal",
+                "product_name": "טונה סטארקיסט בשמן זית",
+                "brand_code": "סטארקיסט"
+            }
+        ]
+    },
+    {
+        "brand": "Star Kist",
+        "fish": "Atum",
+        "product": "em agua 6 x 140g",
+        "stores": [
+            {
+                "name": "shufersal",
+                "product_name": "טונה סטארקיסט במים",
+                "brand_code": "סטארקיסט"
+            }
+        ]
+    },
+    {
+        "brand": "Star Kist",
+        "fish": "Atum",
+        "product": "em azeite 6 x 140g",
+        "stores": [
+            {
+                "name": "shufersal",
+                "product_name": "טונה סטארקיסט בשמן",
+                "brand_code": "סטארקיסט"
+            }
+        ]
+    },
+    {
+        "brand": "Star Kist",
+        "fish": "Atum",
+        "product": "em oleo 160g",
+        "stores": [
+            {
+                "name": "shufersal",
+                "product_name": "נתחי טונה סטארקיסט בשמן",
+                "brand_code": "סטארקיסט"
+            }
+        ]
+    },
+    {
+        "brand": "Star Kist",
+        "fish": "Atum",
+        "product": "em oleo com limao 160g",
+        "stores": [
+            {
+                "name": "shufersal",
+                "product_name": "טונה בשמן עם לימון",
+                "brand_code": "סטארקיסט"
+            }
+        ]
+    },
+    {
+        "brand": "Willy Food",
+        "fish": "Atum",
+        "product": "em agua 4 x 160g",
+        "stores": [
+            {
+                "name": "shufersal",
+                "product_name": "נתחי טונה במים",
+                "brand_code": "וילי פוד"
+            }
+        ]
+    },
+    {
+        "brand": "Willy Food",
+        "fish": "Atum",
+        "product": "em oleo 4 x 160g",
+        "stores": [
+            {
+                "name": "shufersal",
+                "product_name": "נתחי טונה בשמן",
+                "brand_code": "וילי פוד"
+            }
+        ]
+    },
+    {
+        "brand": "Willy Food",
+        "fish": "Atum",
+        "product": "em oleo de canola 4 x 160g",
+        "stores": [
+            {
+                "name": "shufersal",
+                "product_name": "נתחי טונה בשמן קנולה",
+                "brand_code": "וילי פוד"
+            }
+        ]
+    },
+    {
+        "brand": "Caprimar",
+        "fish": "Atum",
+        "product": "em azeite 190g",
+        "stores": [
+            {
+                "name": "shufersal",
+                "product_name": "נתחי טונה בשמן זית",
+                "brand_code": "קפרימאר"
+            }
+        ]
+    },
+    {
+        "brand": "Caprimar",
+        "fish": "Atum",
+        "product": "em azeite picante 190g",
+        "stores": [
+            {
+                "name": "shufersal",
+                "product_name": "נתחי טונה בשמן זית צ'ילי",
+                "brand_code": "קפרימאר"
+            }
+        ]
+    },
+    {
+        "brand": "Caprimar",
+        "fish": "Atum",
+        "product": "em azeite e limao 190g",
+        "stores": [
+            {
+                "name": "shufersal",
+                "product_name": "נתחי טונה בשמן זית+לימון",
+                "brand_code": "קפרימאר"
+            }
+        ]
+    },
+    {
+        "brand": "Robert",
+        "fish": "Atum",
+        "product": "em azeite 120g",
+        "stores": [
+            {
+                "name": "shufersal",
+                "product_name": "גושי טונה בהירה בשמן זית",
+                "brand_code": "רוברט"
             }
         ]
     }
