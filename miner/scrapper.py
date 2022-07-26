@@ -55,13 +55,15 @@ class Scrapper:
     def _init_website_scrappers(self):
         self.website_scrappers = dict()
         
+        # portugal
         self.website_scrappers['auchan'] = AuchanScrapper(self.brand_name_dict)
         self.website_scrappers['continente'] = ContinenteScrapper(self.brand_name_dict)
         self.website_scrappers['pingo_doce'] = PingoDoceScrapper(self.brand_name_dict)
 
-        self.website_scrappers['yelnot_bitan'] = YelnotBitanScrapper(None)
-        self.website_scrappers['hazi_hinam'] = HaziHinamScrapper(None)
-        self.website_scrappers['shufersal'] = ShufersalScrapper(None)
+        # israel
+        self.website_scrappers['yelnot_bitan'] = YelnotBitanScrapper()
+        self.website_scrappers['hazi_hinam'] = HaziHinamScrapper()
+        self.website_scrappers['shufersal'] = ShufersalScrapper()
         
 
     def _scrap_web_page(self, store, page_source, brand_code):
@@ -90,7 +92,7 @@ class Scrapper:
             driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
 
             # Wait to load page
-            time.sleep(2)
+            time.sleep(4)
 
             # Calculate new scroll height and compare with last scroll height
             new_height = driver.execute_script("return document.body.scrollHeight")
@@ -98,11 +100,6 @@ class Scrapper:
                 break
             last_height = new_height
 
-        return driver.page_source
-
-
-    def _get_hazi_hinam_html(self, driver):
-        driver.get('https://shop.hazi-hinam.co.il/#/catalog?viewMode=category_targeting&categoryId=84&subCategoryId=11184')
         return driver.page_source
 
 
