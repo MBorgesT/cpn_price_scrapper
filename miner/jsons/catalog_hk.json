@@ -629,6 +629,17 @@
     {
         "brand": "Briosa",
         "fish": "Bacalhau",
+        "product": "em azeite 120g",
+        "stores": [
+            {
+                "name": "city_super",
+                "link": "https://online.citysuper.com.hk/collections/canned-preserved-food-canned-meat-seafood/products/briosa-codfish-olive-oil-301465504"
+            }
+        ]
+    },
+    {
+        "brand": "Briosa",
+        "fish": "Bacalhau",
         "product": "pate 75g",
         "stores": [
             {
