@@ -17,6 +17,7 @@ from miner.store_files.yelnot_bitan import YelnotBitanScrapper
 from miner.store_files.hazi_hinam import HaziHinamScrapper
 from miner.store_files.shufersal import ShufersalScrapper
 from miner.store_files.park_n_shop import ParkNShopScrapper
+from miner.store_files.city_super import CitySuperScrapper
 
 
 # parameters
@@ -68,6 +69,7 @@ class Scrapper:
 
         # hk
         self.website_scrappers['park_n_shop'] = ParkNShopScrapper()
+        self.website_scrappers['city_super'] = CitySuperScrapper()
         
 
     def _scrap_web_page(self, store, page_source, brand_code):
@@ -211,7 +213,7 @@ class Scrapper:
             raise PermissionError('Please close the results file before running the program')
 
         clear()
-        df = pd.DataFrame(columns=['Brand', 'Fish', 'Product', 'Park N Shop', 'Park N Shop offer'])
+        df = pd.DataFrame(columns=['Brand', 'Fish', 'Product', 'Park N Shop', 'Park N Shop offer', 'City Super'])
         print('\tScraping...')
         with tqdm(total=len(self.catalog)) as pbar:
             for product in self.catalog: # product
@@ -232,9 +234,13 @@ class Scrapper:
                         driver.page_source, 
                         brand_code=None
                     )
+
                     if result is not None:
-                        line[self.store_name_dict[store['name']]] = result[0]
-                        line[self.store_name_dict[store['name']] + ' offer'] = result[1]
+                        if isinstance(result, tuple):
+                            line[self.store_name_dict[store['name']]] = result[0]
+                            line[self.store_name_dict[store['name']] + ' offer'] = result[1]
+                        else:
+                            line[self.store_name_dict[store['name']]] = result
 
                 df = pd.concat([df, pd.DataFrame([line])], axis=0, ignore_index=True)
                 pbar.update(1)

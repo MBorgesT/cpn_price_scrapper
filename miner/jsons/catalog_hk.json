@@ -341,6 +341,171 @@
         ]
     },
     {
+        "brand": "Briosa",
+        "fish": "Sardinha",
+        "product": "em azeite 120g",
+        "stores": [
+            {
+                "name": "city_super",
+                "link": "https://online.citysuper.com.hk/collections/canned-preserved-food-canned-meat-seafood/products/briosa-sardines-in-olive-oil-301465495"
+            }
+        ]
+    },
+    {
+        "brand": "Briosa",
+        "fish": "Sardinha",
+        "product": "em azeite picante com condimentos 120g",
+        "stores": [
+            {
+                "name": "city_super",
+                "link": "https://online.citysuper.com.hk/collections/canned-preserved-food-canned-meat-seafood/products/briosa-spiced-sardines-in-olive-oil-301465496"
+            }
+        ]
+    },
+    {
+        "brand": "Briosa",
+        "fish": "Sardinha",
+        "product": "sem pele e ossos em azeite 120g",
+        "stores": [
+            {
+                "name": "city_super",
+                "link": "https://online.citysuper.com.hk/collections/canned-preserved-food-canned-meat-seafood/products/briosa-skinless-boneless-sardines-in-olive-oil-with-lemon-basil-301465498"
+            }
+        ]
+    },
+    {
+        "brand": "Briosa",
+        "fish": "Sardinha",
+        "product": "pate 75g",
+        "stores": [
+            {
+                "name": "city_super",
+                "link": "https://online.citysuper.com.hk/collections/canned-preserved-food-canned-meat-seafood/products/briosa-sardine-pate-301465505"
+            }
+        ]
+    },
+    {
+        "brand": "Briosa",
+        "fish": "Sardinha",
+        "product": "em azeite 115g",
+        "stores": [
+            {
+                "name": "city_super",
+                "link": "https://online.citysuper.com.hk/collections/canned-preserved-food-canned-meat-seafood/products/citysuper-sardines-in-olive-oil-35-301508758"
+            }
+        ]
+    },
+    {
+        "brand": "Conservas de Cambados",
+        "fish": "Sardinha",
+        "product": "em azeite 115g",
+        "stores": [
+            {
+                "name": "city_super",
+                "link": "https://online.citysuper.com.hk/collections/canned-preserved-food-canned-meat-seafood/products/conservas-de-cambados-small-sardines-in-olive-oil-115g"
+            }
+        ]
+    },
+    {
+        "brand": "La Belle-Iloise",
+        "fish": "Sardinha",
+        "product": "em azeite 115g",
+        "stores": [
+            {
+                "name": "city_super",
+                "link": "d-food-canned-meat-seafood/products/la-belle-iloise-saint-georges-sardines-in-olive-oil-115g"
+            }
+        ]
+    },
+    {
+        "brand": "La Belle-Iloise",
+        "fish": "Sardinha",
+        "product": "em azeite extra virgem 115g",
+        "stores": [
+            {
+                "name": "city_super",
+                "link": "https://online.citysuper.com.hk/collections/canned-preserved-food-canned-meat-seafood/products/la-belle-iloise-boneless-sardines-in-extra-virgin-olive-oil-115g"
+            }
+        ]
+    },
+    {
+        "brand": "La Belle-Iloise",
+        "fish": "Sardinha",
+        "product": "em azeite extra virgem com pimenta e limao 115g",
+        "stores": [
+            {
+                "name": "city_super",
+                "link": "https://online.citysuper.com.hk/collections/canned-preserved-food-canned-meat-seafood/products/la-belle-iloise-sardine-in-extra-virgin-olive-oil-with-pepper-lemon-301419418"
+            }
+        ]
+    },
+    {
+        "brand": "La Belle-Iloise",
+        "fish": "Sardinha",
+        "product": "em azeite com limao 115g",
+        "stores": [
+            {
+                "name": "city_super",
+                "link": "https://online.citysuper.com.hk/collections/canned-preserved-food-canned-meat-seafood/products/la-belle-iloise-sardine-in-olive-oil-with-lemon-301395018"
+            }
+        ]
+    },
+    {
+        "brand": "La Belle-Iloise",
+        "fish": "Sardinha",
+        "product": "com muscadet e condimentos 115g",
+        "stores": [
+            {
+                "name": "city_super",
+                "link": "https://online.citysuper.com.hk/collections/canned-preserved-food-canned-meat-seafood/products/la-belle-iloise-sardine-with-muscadet-seasonings-301419417"
+            }
+        ]
+    },
+    {
+        "brand": "La Belle-Iloise",
+        "fish": "Sardinha",
+        "product": "em olivas de nice 115g",
+        "stores": [
+            {
+                "name": "city_super",
+                "link": "https://online.citysuper.com.hk/collections/canned-preserved-food-canned-meat-seafood/products/la-belle-iloise-sardine-with-nice-olives-301419419"
+            }
+        ]
+    },
+    {
+        "brand": "La Belle-Iloise",
+        "fish": "Sardinha",
+        "product": "em azeite e molho de pitomail 115g",
+        "stores": [
+            {
+                "name": "city_super",
+                "link": "https://online.citysuper.com.hk/collections/canned-preserved-food-canned-meat-seafood/products/la-belle-iloise-sardines-in-oil-with-pitomail-sauce-115g"
+            }
+        ]
+    },
+    {
+        "brand": "La Belle-Iloise",
+        "fish": "Sardinha",
+        "product": "com pimenta espelette e presunto de bayonne 115g",
+        "stores": [
+            {
+                "name": "city_super",
+                "link": "https://online.citysuper.com.hk/collections/canned-preserved-food-canned-meat-seafood/products/la-belle-iloise-sardines-with-espelette-pepper-and-bayonne-ham-115g"
+            }
+        ]
+    },
+    {
+        "brand": "La Belle-Iloise",
+        "fish": "Sardinha",
+        "product": "em molho de tomate 115g",
+        "stores": [
+            {
+                "name": "city_super",
+                "link": "https://online.citysuper.com.hk/collections/canned-preserved-food-canned-meat-seafood/products/la-belle-iloise-sardines-with-tomato-115g"
+            }
+        ]
+    },
+    {
         "brand": "Red Marubean",
         "fish": "Cavala",
         "product": "em oleo de soja 120g",
@@ -414,6 +579,281 @@
             {
                 "name": "park_n_shop",
                 "link": "https://www.parknshop.com/en/grilled-mackerel-fillets/p/BP_151485"
+            }
+        ]
+    },
+    {
+        "brand": "Briosa",
+        "fish": "Cavala",
+        "product": "em azeite 120g",
+        "stores": [
+            {
+                "name": "city_super",
+                "link": "https://online.citysuper.com.hk/collections/canned-preserved-food-canned-meat-seafood/products/briosa-mackerel-fillets-in-olive-oil-301465501"
+            }
+        ]
+    },
+    {
+        "brand": "Cole's",
+        "fish": "Cavala",
+        "product": "em azeite 125g",
+        "stores": [
+            {
+                "name": "city_super",
+                "link": "https://online.citysuper.com.hk/collections/canned-preserved-food-canned-meat-seafood/products/cole-s-wild-mackerel-in-olive-oil-115g"
+            }
+        ]
+    },
+    {
+        "brand": "Cole's",
+        "fish": "Cavala",
+        "product": "em azeite 125g",
+        "stores": [
+            {
+                "name": "city_super",
+                "link": "https://online.citysuper.com.hk/collections/canned-preserved-food-canned-meat-seafood/products/cole-s-wild-mackerel-in-olive-oil-115g"
+            }
+        ]
+    },
+    {
+        "brand": "La Belle-Iloise",
+        "fish": "Cavala",
+        "product": "marinado com agua e condimentos 118g",
+        "stores": [
+            {
+                "name": "city_super",
+                "link": "https://online.citysuper.com.hk/collections/canned-preserved-food-canned-meat-seafood/products/la-belle-iloise-fillets-of-mackerel-marinated-with-white-wine-seasoning-118g"
+            }
+        ]
+    },
+    {
+        "brand": "Briosa",
+        "fish": "Bacalhau",
+        "product": "pate 75g",
+        "stores": [
+            {
+                "name": "city_super",
+                "link": "https://online.citysuper.com.hk/collections/canned-preserved-food-canned-meat-seafood/products/briosa-codfish-pate-301465506"
+            }
+        ]
+    },
+    {
+        "brand": "Briosa",
+        "fish": "Carapauzinhos",
+        "product": "em azeite 120g",
+        "stores": [
+            {
+                "name": "city_super",
+                "link": "https://online.citysuper.com.hk/collections/canned-preserved-food-canned-meat-seafood/products/briosa-horse-mackerel-in-olive-oil-301465502"
+            }
+        ]
+    },
+    {
+        "brand": "Briosa",
+        "fish": "Picas",
+        "product": "em azeite picante 120g",
+        "stores": [
+            {
+                "name": "city_super",
+                "link": "https://online.citysuper.com.hk/collections/canned-preserved-food-canned-meat-seafood/products/briosa-small-garfish-in-spicy-olive-oil-301465503"
+            }
+        ]
+    },
+    {
+        "brand": "Briosa",
+        "fish": "Petingas",
+        "product": "em azeite picante 120g",
+        "stores": [
+            {
+                "name": "city_super",
+                "link": "https://online.citysuper.com.hk/collections/canned-preserved-food-canned-meat-seafood/products/briosa-small-sardines-in-olive-oil-301465497"
+            }
+        ]
+    },
+    {
+        "brand": "City Super",
+        "fish": "Petingas",
+        "product": "em azeite 115g",
+        "stores": [
+            {
+                "name": "city_super",
+                "link": "https://online.citysuper.com.hk/collections/canned-preserved-food-canned-meat-seafood/products/citysuper-baby-sardines-in-olive-oil-1012-301508757"
+            }
+        ]
+    },
+    {
+        "brand": "Los Peperetes",
+        "fish": "Petingas",
+        "product": "em azeite 120g",
+        "stores": [
+            {
+                "name": "city_super",
+                "link": "https://online.citysuper.com.hk/collections/canned-preserved-food-canned-meat-seafood/products/los-peperetes-baby-sardines-in-olive-oil-150g"
+            }
+        ]
+    },
+    {
+        "brand": "Briosa",
+        "fish": "Atum",
+        "product": "em azeite 120g",
+        "stores": [
+            {
+                "name": "city_super",
+                "link": "https://online.citysuper.com.hk/collections/canned-preserved-food-canned-meat-seafood/products/briosa-tuna-fillets-in-olive-oil-301465499"
+            }
+        ]
+    },
+    {
+        "brand": "Briosa",
+        "fish": "Atum",
+        "product": "em azeite com cebola e louro 120g",
+        "stores": [
+            {
+                "name": "city_super",
+                "link": "https://online.citysuper.com.hk/collections/canned-preserved-food-canned-meat-seafood/products/briosa-tuna-fillets-in-olive-oil-with-onion-bay-leaf-301465500"
+            }
+        ]
+    },
+    {
+        "brand": "City Super",
+        "fish": "Atum",
+        "product": "em azeite 112g",
+        "stores": [
+            {
+                "name": "city_super",
+                "link": "https://online.citysuper.com.hk/collections/canned-preserved-food-canned-meat-seafood/products/citysuper-white-albacore-tuna-in-olive-oil-301508759"
+            }
+        ]
+    },
+    {
+        "brand": "Los Peperetes",
+        "fish": "Atum",
+        "product": "filetes em azeite 120g",
+        "stores": [
+            {
+                "name": "city_super",
+                "link": "https://online.citysuper.com.hk/collections/canned-preserved-food-canned-meat-seafood/products/los-peperetes-fillet-of-white-tuna-in-olive-oil-150g"
+            }
+        ]
+    },
+    {
+        "brand": "Ortiz",
+        "fish": "Atum",
+        "product": "filetes em azeite 110g",
+        "stores": [
+            {
+                "name": "city_super",
+                "link": "https://online.citysuper.com.hk/collections/canned-preserved-food-canned-meat-seafood/products/ortiz-white-tuna-fillets-in-olive-oil-110g"
+            }
+        ]
+    },
+    {
+        "brand": "Ortiz",
+        "fish": "Atum",
+        "product": "em azeite 112g",
+        "stores": [
+            {
+                "name": "city_super",
+                "link": "https://online.citysuper.com.hk/collections/canned-preserved-food-canned-meat-seafood/products/ortiz-white-tuna-in-olive-oil-tin-112g"
+            }
+        ]
+    },
+    {
+        "brand": "Ortiz",
+        "fish": "Atum",
+        "product": "em azeite 270g",
+        "stores": [
+            {
+                "name": "city_super",
+                "link": "https://online.citysuper.com.hk/collections/canned-preserved-food-canned-meat-seafood/products/ortiz-white-tuna-in-olive-oil-glass-270g"
+            }
+        ]
+    },
+    {
+        "brand": "Ortiz",
+        "fish": "Atum",
+        "product": "biologico em azeite extra virgem 220g",
+        "stores": [
+            {
+                "name": "city_super",
+                "link": "https://online.citysuper.com.hk/collections/canned-preserved-food-canned-meat-seafood/products/ortiz-white-tuna-in-organic-extra-virgin-olive-oil-190g"
+            }
+        ]
+    },
+    {
+        "brand": "Petit Navire",
+        "fish": "Atum",
+        "product": "com manjericao e limao 120g",
+        "stores": [
+            {
+                "name": "city_super",
+                "link": "https://online.citysuper.com.hk/collections/canned-preserved-food-canned-meat-seafood/products/petit-navire-msc-tuna-with-basil-lemon-301491311"
+            }
+        ]
+    },
+    {
+        "brand": "Petit Navire",
+        "fish": "Atum",
+        "product": "com gengibre e curcuma 120g",
+        "stores": [
+            {
+                "name": "city_super",
+                "link": "https://online.citysuper.com.hk/collections/canned-preserved-food-canned-meat-seafood/products/petit-navire-msc-tuna-with-ginger-turmeric-301491312"
+            }
+        ]
+    },
+    {
+        "brand": "Petit Navire",
+        "fish": "Atum",
+        "product": "em azeite extra virgem 160g",
+        "stores": [
+            {
+                "name": "city_super",
+                "link": "https://online.citysuper.com.hk/collections/canned-preserved-food-canned-meat-seafood/products/petit-navire-msc-white-tuna-in-extra-virgin-olive-oil-301491309"
+            }
+        ]
+    },
+    {
+        "brand": "Santa Catarina",
+        "fish": "Atum",
+        "product": "filetes em azeite 120g",
+        "stores": [
+            {
+                "name": "city_super",
+                "link": "https://online.citysuper.com.hk/collections/canned-preserved-food-canned-meat-seafood/products/santa-catarina-tuna-fillet-in-olive-oil-120g"
+            }
+        ]
+    },
+    {
+        "brand": "Santa Catarina",
+        "fish": "Atum",
+        "product": "filetes em azeite biologico 120g",
+        "stores": [
+            {
+                "name": "city_super",
+                "link": "https://online.citysuper.com.hk/collections/canned-preserved-food-canned-meat-seafood/products/santa-catarina-tuna-fillet-in-organic-olive-oil-120g"
+            }
+        ]
+    },
+    {
+        "brand": "Star Kist",
+        "fish": "Atum",
+        "product": "pedacos em oleo vegetal 142g",
+        "stores": [
+            {
+                "name": "city_super",
+                "link": "https://online.citysuper.com.hk/collections/canned-preserved-food-canned-meat-seafood/products/star-kist-chunk-light-tuna-in-vegetable-oil-142g"
+            }
+        ]
+    },
+    {
+        "brand": "Star Kist",
+        "fish": "Atum",
+        "product": "pedacos em agua 142g",
+        "stores": [
+            {
+                "name": "city_super",
+                "link": "https://online.citysuper.com.hk/collections/canned-preserved-food-canned-meat-seafood/products/star-kist-chunk-light-tuna-in-water-142g"
             }
         ]
     },
