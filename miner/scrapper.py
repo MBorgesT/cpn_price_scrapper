@@ -16,6 +16,7 @@ from miner.store_files.pingo_doce import PingoDoceScrapper
 from miner.store_files.yelnot_bitan import YelnotBitanScrapper
 from miner.store_files.hazi_hinam import HaziHinamScrapper
 from miner.store_files.shufersal import ShufersalScrapper
+from miner.store_files.park_n_shop import ParkNShopScrapper
 
 
 # parameters
@@ -64,6 +65,9 @@ class Scrapper:
         self.website_scrappers['yelnot_bitan'] = YelnotBitanScrapper()
         self.website_scrappers['hazi_hinam'] = HaziHinamScrapper()
         self.website_scrappers['shufersal'] = ShufersalScrapper()
+
+        # hk
+        self.website_scrappers['park_n_shop'] = ParkNShopScrapper()
         
 
     def _scrap_web_page(self, store, page_source, brand_code):
@@ -156,7 +160,7 @@ class Scrapper:
         #hazi_hinam_page_source = self._get_hazi_hinam_html(driver)
 
         clear()
-        df = pd.DataFrame(columns=['Brand', 'Fish', 'Product', 'Yelnot Bitan', 'Hazi Hinam'])
+        df = pd.DataFrame(columns=['Brand', 'Fish', 'Product', 'Yelnot Bitan', 'Hazi Hinam', 'Shufersal'])
         print('\tScraping...')
         with tqdm(total=len(self.catalog)) as pbar:
             for product in self.catalog: # product
@@ -190,6 +194,47 @@ class Scrapper:
                     )
                     if result is not None:
                         line[self.store_name_dict[store['name']]] = result
+
+                df = pd.concat([df, pd.DataFrame([line])], axis=0, ignore_index=True)
+                pbar.update(1)
+
+        df.to_excel(writer)
+        writer.save()
+
+
+    def scrap_hk(self):
+        driver = crawler.get_chromium_driver(simulate_firefox=True)
+        today = datetime.today().strftime('%Y-%m-%d')
+        try:
+            writer = pd.ExcelWriter(f'{today}-hk-prices.xlsx', engine='xlsxwriter')
+        except PermissionError:
+            raise PermissionError('Please close the results file before running the program')
+
+        clear()
+        df = pd.DataFrame(columns=['Brand', 'Fish', 'Product', 'Park N Shop', 'Park N Shop offer'])
+        print('\tScraping...')
+        with tqdm(total=len(self.catalog)) as pbar:
+            for product in self.catalog: # product
+                line = dict()
+                line['Brand'] = product['brand']
+                line['Fish'] = product['fish']
+                line['Product'] = product['product']
+                
+                for store in product['stores']:
+                    try: # gambiarra to bypass infinite page loading, even though it's totally loaded
+                        driver.get(store['link'])
+                    except Exception:
+                        pass
+                    sleep(SLEEP_TIME)
+                    
+                    result = self._scrap_web_page(
+                        store['name'], 
+                        driver.page_source, 
+                        brand_code=None
+                    )
+                    if result is not None:
+                        line[self.store_name_dict[store['name']]] = result[0]
+                        line[self.store_name_dict[store['name']] + ' offer'] = result[1]
 
                 df = pd.concat([df, pd.DataFrame([line])], axis=0, ignore_index=True)
                 pbar.update(1)

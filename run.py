@@ -7,6 +7,7 @@ if __name__ == '__main__':
         print('Selecione o país a ser escaneado:')
         print('1 - Portugal')
         print('2 - Israel')
+        print('3 - Hong Kong')
         op = input('Opção: ')
 
         if op == '1':
@@ -14,6 +15,9 @@ if __name__ == '__main__':
             break
         elif op == '2':
             country_param = 'israel'
+            break
+        elif op == '3':
+            country_param = 'hk'
             break
         else:
             print('\nOpção inválida. Favor selecionar alguma das listadas.\n')
@@ -34,8 +38,10 @@ if __name__ == '__main__':
             scrapper.scrap_portugal()
         elif country_param == 'israel':
             scrapper.scrap_israel()
+        elif country_param == 'hk':
+            scrapper.scrap_hk()
     except Exception as e:
         print('\n\n')
         raise e
 
-    input('\n\nPressione qualquer tecla para terminar o programa')
+    input('\n\nPressione qualquer tecla para encerrar o programa ')
