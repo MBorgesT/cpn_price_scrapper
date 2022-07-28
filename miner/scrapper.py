@@ -148,7 +148,7 @@ class Scrapper:
 
                         pbar.update(1)
 
-            df.to_excel(writer, sheet_name=pt_name)
+                df.to_excel(writer, sheet_name=pt_name)
 
         writer.save()
 
