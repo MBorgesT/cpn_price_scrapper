@@ -1,1 +1,1 @@
-pyinstaller.exe --onefile --console --path=C:\Users\matheus.borges\.conda\envs\localbase\Lib\site-packages run.py
+pyinstaller.exe --onefile --console --hidden-import xlsxwriter --hidden-import lxml --path=C:\Users\matheus.borges\Code\cpn_price_scrapper\venv\Lib\site-packages run.py
