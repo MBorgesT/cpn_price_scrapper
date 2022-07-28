@@ -32,7 +32,7 @@ class Scrapper:
 
     def __init__(self, catalog, jsons_folder):
         if jsons_folder is None:
-            jsons_folder = 'miner/jsons/'
+            jsons_folder = 'config/'
             
         self._init_dicts(catalog, jsons_folder)
         self._init_website_scrappers()
