@@ -126,7 +126,7 @@ class Scrapper:
             raise PermissionError('Please close the results file before running the program')
 
         clear()
-        print('Scraping...')
+        print('\tScraping...')
         with tqdm(total=self._get_n_products_portugal()) as pbar:
             for pt in self.catalog: # product type
                 df = pd.DataFrame(columns=['store', 'brand', 'amount_g', 'price', 'price_per_100g'])

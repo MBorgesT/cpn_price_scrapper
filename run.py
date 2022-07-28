@@ -44,4 +44,4 @@ if __name__ == '__main__':
         print('\n\n')
         raise e
 
-    input('\n\nPressione qualquer tecla para encerrar o programa ')
+    input('\n\nPressione ENTER tecla para encerrar o programa ')
