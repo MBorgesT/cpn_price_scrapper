@@ -89,6 +89,14 @@ class Scrapper:
         raise Exception('Invalid product type')
 
 
+    def _get_n_products_portugal(self):
+        n = 0
+        for pt in self.catalog:
+            for _, p_list in pt['stores'].items():
+                n += len(p_list)
+        return n
+
+
     def _get_shufersal_html(self, driver):
         driver.get('https://www.shufersal.co.il/online/he/%D7%A7%D7%98%D7%92%D7%95%D7%A8%D7%99%D7%95%D7%AA/%D7%A1%D7%95%D7%A4%D7%A8%D7%9E%D7%A8%D7%A7%D7%98/%D7%91%D7%99%D7%A9%D7%95%D7%9C-%D7%90%D7%A4%D7%99%D7%94-%D7%95%D7%A9%D7%99%D7%9E%D7%95%D7%A8%D7%99%D7%9D/%D7%A9%D7%99%D7%9E%D7%95%D7%A8%D7%99%D7%9D/c/A2217?q=:relevance:categories-4:A221716')
         
@@ -118,28 +126,23 @@ class Scrapper:
             raise PermissionError('Please close the results file before running the program')
 
         clear()
-        print('Scraping:')
-        for pt in self.catalog: # product type
-            df = pd.DataFrame(columns=['store', 'brand', 'amount_g', 'price', 'price_per_100g'])
-            pt_name = self.product_type_dict[pt['product_type']]
+        print('Scraping...')
+        with tqdm(total=self._get_n_products_portugal()) as pbar:
+            for pt in self.catalog: # product type
+                df = pd.DataFrame(columns=['store', 'brand', 'amount_g', 'price', 'price_per_100g'])
+                pt_name = self.product_type_dict[pt['product_type']]
 
-            print(f'\n\t{pt_name}...')
-            with tqdm(total=self._get_n_products_by_pt(pt['product_type'])) as pbar:
-                for store in reversed(self.store_name_dict.keys()):      
-                    if store not in pt['stores'].keys():
-                        pbar.update(1)
-                        continue
-
-                    for p in pt['stores'][store]:
+                for store_name, products in pt['stores'].items():
+                    for p in products:
                         try: # gambiarra to bypass infinite page loading, even though it's totally loaded
                             driver.get(p['link'])
                         except Exception:
                             pass
                         
-                        if store == 'pingo_doce':
+                        if store_name == 'pingo_doce':
                             sleep(SLEEP_TIME)
                         
-                        line = self._scrap_web_page(store, driver.page_source, brand_code=p['brand'])
+                        line = self._scrap_web_page(store_name, driver.page_source, brand_code=p['brand'])
                         if line is not None:
                             df = pd.concat([df, pd.DataFrame([line])], axis=0, ignore_index=True)
 
