@@ -51,6 +51,10 @@
             {
                 "name": "park_n_shop",
                 "link": "https://www.parknshop.com/en/del-monte-sardines-in-tomato-sauce/p/BP_103162"
+            },
+            {
+                "name": "dchfood",
+                "link": "https://www.dchfoodmartdeluxe.com/te/product-detail.php?plu=32554&lang=en"
             }
         ]
     },
@@ -123,11 +127,30 @@
     {
         "brand": "Porthos",
         "fish": "Sardinha",
+        "product": "em azeite 125g",
+        "stores": [
+            {
+                "name": "park_n_shop",
+                "link": "https://www.parknshop.com/en/porthos-sardines-in-hot-olive-oil/p/BP_112016"
+            },
+            {
+                "name": "dchfood",
+                "link": "https://www.dchfoodmartdeluxe.com/te/product-detail.php?plu=35714&lang=en"
+            }
+        ]
+    },
+    {
+        "brand": "Porthos",
+        "fish": "Sardinha",
         "product": "em azeite picante 125g",
         "stores": [
             {
                 "name": "park_n_shop",
                 "link": "https://www.parknshop.com/en/porthos-sardines-in-hot-olive-oil/p/BP_112016"
+            },
+            {
+                "name": "dchfood",
+                "link": "https://www.dchfoodmartdeluxe.com/te/product-detail.php?plu=35715&lang=en"
             }
         ]
     },
@@ -139,6 +162,10 @@
             {
                 "name": "park_n_shop",
                 "link": "https://www.parknshop.com/en/porthos-sardines-in-hot-tomato/p/BP_307798"
+            },
+            {
+                "name": "dchfood",
+                "link": "https://www.dchfoodmartdeluxe.com/te/product-detail.php?plu=44240&lang=en"
             }
         ]
     },
@@ -150,6 +177,10 @@
             {
                 "name": "park_n_shop",
                 "link": "https://www.parknshop.com/en/sardines-in-teriyaki/p/BP_487799"
+            },
+            {
+                "name": "dchfood",
+                "link": "https://www.dchfoodmartdeluxe.com/te/product-detail.php?plu=43326&lang=en"
             }
         ]
     },
@@ -216,6 +247,10 @@
             {
                 "name": "park_n_shop",
                 "link": "https://www.parknshop.com/en/sardines-in-olive-oil/p/BP_449829"
+            },
+            {
+                "name": "dchfood",
+                "link": "https://www.dchfoodmartdeluxe.com/te/product-detail.php?plu=43180&lang=en"
             }
         ]
     },
@@ -227,6 +262,17 @@
             {
                 "name": "park_n_shop",
                 "link": "https://www.parknshop.com/en/sardines-in-olive-oil-chilli/p/BP_449830"
+            }
+        ]
+    },
+    {
+        "brand": "Royal Taste",
+        "fish": "Sardinha",
+        "product": "em molho de tomate picante 120g",
+        "stores": [
+            {
+                "name": "dchfood",
+                "link": "https://www.dchfoodmartdeluxe.com/te/product-detail.php?plu=43181&lang=en"
             }
         ]
     },
@@ -935,6 +981,17 @@
         ]
     },
     {
+        "brand": "Sky Dragon",
+        "fish": "Dace",
+        "product": "fried with salted black beans 184g",
+        "stores": [
+            {
+                "name": "dchfood",
+                "link": "https://www.dchfoodmartdeluxe.com/te/product-detail.php?plu=44511&lang=en"
+            }
+        ]
+    },
+    {
         "brand": "Ganzhu",
         "fish": "Dace",
         "product": "fried with salted black beans 227g",
@@ -964,6 +1021,10 @@
             {
                 "name": "park_n_shop",
                 "link": "https://www.parknshop.com/en/fried-dace/p/BP_190261"
+            },
+            {
+                "name": "dchfood",
+                "link": "https://www.dchfoodmartdeluxe.com/te/product-detail.php?plu=27800&lang=en"
             }
         ]
     },

@@ -1,7 +1,5 @@
 import json
 import os
-import sys
-import io
 import time
 from attrs import asdict
 import pandas as pd
@@ -18,6 +16,7 @@ from miner.store_files.hazi_hinam import HaziHinamScrapper
 from miner.store_files.shufersal import ShufersalScrapper
 from miner.store_files.park_n_shop import ParkNShopScrapper
 from miner.store_files.city_super import CitySuperScrapper
+from miner.store_files.dchfood import DCHFoodScrapper
 
 
 # parameters
@@ -70,6 +69,7 @@ class Scrapper:
         # hk
         self.website_scrappers['park_n_shop'] = ParkNShopScrapper()
         self.website_scrappers['city_super'] = CitySuperScrapper()
+        self.website_scrappers['dchfood'] = DCHFoodScrapper()
         
 
     def _scrap_web_page(self, store, page_source, brand_code):
@@ -216,7 +216,7 @@ class Scrapper:
             raise PermissionError('Please close the results file before running the program')
 
         clear()
-        df = pd.DataFrame(columns=['Brand', 'Fish', 'Product', 'Park N Shop', 'Park N Shop offer', 'City Super'])
+        df = pd.DataFrame(columns=['Brand', 'Fish', 'Product', 'Park N Shop', 'Park N Shop offer', 'City Super', 'DCHFood'])
         print('\tScraping...')
         with tqdm(total=len(self.catalog)) as pbar:
             for product in self.catalog: # product
